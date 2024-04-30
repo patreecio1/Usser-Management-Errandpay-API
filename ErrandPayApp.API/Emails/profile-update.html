@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile Updated | Naira.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+    @font-face {
+      font-family: 'Inter';
+      src: local('Inter'), url(../fonts/Inter-Regular.ttf) format('truetype');
+    }
+    @font-face {
+      font-family: 'InterBold';
+      src: local('InterBold'), url(../fonts/Inter-Bold.ttf) format('truetype');
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body{
+      margin: 0 auto;
+      padding: 0 40px;
+      font-family: 'Inter';
+      color: #07121c;
+    }
+
+    .header{
+      justify-content: center;
+      display: flex;
+      padding: 36px 0;
+      border-bottom: 1px solid #d1d3d5;
+    }
+
+    .logo{
+      height: 36px;
+    }
+
+    .content{
+      padding: 20px 0;
+      padding-bottom: 80px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .campaign-img{
+      margin: 20px 0;
+      justify-content: center;
+      display: flex;
+      height: 240px;
+    }
+
+    .campaign-img img{
+      max-width: 100%;
+    }
+
+
+    .title{
+      margin: 35px 0;
+      display: flex;
+      font-family: 'InterBold';
+      font-size: 32px;
+    }
+
+    .title span {
+      font-family: 'Inter';
+    }
+
+    .message{
+      font-size: 20px;
+      line-height: 29px;
+    }
+
+    .action{
+      margin: 30px 0;
+      display: flex;
+    }
+
+    .action .btn{
+      font-size: 16px;
+      color: #FFF;
+      padding: 20px 32px;
+      background-color: #00b442;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .action-line{
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      width:100%;
+    }
+
+    .extra-message{
+      margin: 7px 0;
+      flex-direction: column;
+      display: flex;
+      color: #75818d;
+      font-size: 14px;
+    }
+
+    .link{
+      display: flex;
+      color: #ff5b00;
+      font-size: 14px;
+      line-height: 22px;
+      text-decoration: underline;
+    }
+
+
+    .footer-message{
+      font-size: 14px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .social-icons{
+      display: flex;
+    }
+
+    .social-icons div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 6px;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(191, 199, 209, 0.2)
+
+      ;
+      border-radius: 20px;
+    }
+
+
+    .footer{
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      display: flex;
+      padding: 36px 0;
+      background-color: #f9f9f9;
+    }
+
+    @media only screen and (max-width: 768px) {
+      /* For mobile phones: */
+      body{
+        width: 100%;
+      }
+
+      .content{
+        max-width: 100%;
+      }
+
+      .logo{
+        height: 28px;
+      }
+      .campaign-img{
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+	<section class="header">
+		<img src="images/group-4@2x.png" alt="naira.com" class="logo">
+	</section>
+	<section class="content">
+		<div class="campaign-img" style="background-image: url('images/group-profile@2x.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+		</div>
+		<div class="title" >
+			Profile Updated!
+		</div>
+		<div class="message">
+			Hello Usman. Your profile has been updated successfully.Click the button below:
+		</div>
+		<div class="action">
+			<span class="btn">
+				Login to your account
+			</span>
+		</div>
+		<div class="extra-message">If you did not make this request, just ignore this email.</div>
+	</section>
+	<section class="footer">
+		<div class="footer-message">
+			ⓒ Naira.com - Copyright 2020. All rights Reserved
+		</div>
+		<div class="social-icons">
+			<div>
+				<img src="images/instagram.png" alt="">
+			</div>
+			<div>
+				<img src="images/twitter.png" alt="">
+			</div>
+			<div>
+				<img src="images/facebook.png" alt="">
+			</div>
+		</div>
+	</section>
+</body>
+</html>

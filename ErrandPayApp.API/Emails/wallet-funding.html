@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Notification | Naira.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style type="text/css">
+    @font-face {
+      font-family: 'Inter';
+      src: local('Inter'), url(../fonts/Inter-Regular.ttf) format('truetype');
+    }
+    @font-face {
+      font-family: 'InterBold';
+      src: local('InterBold'), url(../fonts/Inter-Bold.ttf) format('truetype');
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body{
+      margin: 0 auto;
+      padding: 0 40px;
+      font-family: 'Inter';
+      color: #07121c;
+    }
+
+    .header{
+      justify-content: center;
+      display: flex;
+      padding: 36px 0;
+      border-bottom: 1px solid #d1d3d5;
+    }
+
+    .logo{
+      height: 36px;
+    }
+
+    .content{
+      padding: 20px 0;
+      padding-bottom: 80px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .campaign-img{
+      margin: 20px 0;
+      justify-content: center;
+      display: flex;
+      height: 240px;
+    }
+
+    .campaign-img img{
+      max-width: 100%;
+    }
+
+
+    .title{
+      margin: 35px 0;
+      display: flex;
+      font-family: 'InterBold';
+      font-size: 32px;
+    }
+
+    .title span {
+      font-family: 'Inter';
+    }
+
+    .message{
+      font-size: 20px;
+      line-height: 29px;
+    }
+
+    .action{
+      margin: 30px 0;
+      display: flex;
+    }
+
+    .action .btn{
+      font-size: 16px;
+      color: #FFF;
+      padding: 20px 32px;
+      background-color: #00b442;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .action-line{
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      width:100%;
+    }
+
+    .extra-message{
+      margin: 7px 0;
+      flex-direction: column;
+      display: flex;
+      color: #75818d;
+      font-size: 14px;
+    }
+
+    .link{
+      display: flex;
+      color: #ff5b00;
+      font-size: 14px;
+      line-height: 22px;
+      text-decoration: underline;
+    }
+
+
+    .footer-message{
+      font-size: 14px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .social-icons{
+      display: flex;
+    }
+
+    .social-icons div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 6px;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(191, 199, 209, 0.2)
+
+      ;
+      border-radius: 20px;
+    }
+
+
+    .footer{
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      display: flex;
+      padding: 36px 0;
+      background-color: #f9f9f9;
+    }
+
+    @media only screen and (max-width: 768px) {
+      /* For mobile phones: */
+      body{
+        width: 100%;
+      }
+
+      .content{
+        max-width: 100%;
+      }
+
+      .logo{
+        height: 28px;
+      }
+      .campaign-img{
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+	<section class="header">
+		<img src="images/group-4@2x.png" alt="naira.com" class="logo">
+	</section>
+	<section class="content">
+		<div class="campaign-img" style="background-image: url('images/group-wallet@2x.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+		</div>
+		<div class="title" >
+			Your  wallet deposit was sucessful
+		</div>
+		<div class="message">
+      <div style="margin-bottom: 15px;">Hello Usman Abiola, </div>
+      We received your deposit of <strong>₦70000.00</strong> and your Naira.com NGN wallet account has been credited successfully. 
+      <div style="margin-top: 15px;">Please find details of the transaction below:</div>
+		</div>
+    <div class="action" style="display: block;">
+      <div style="margin-bottom: 36px;">
+        <div class="action-line" style="color: #7f8fa4; font-size: 16px; line-height: 19px; margin-bottom: 13px;">
+          <span>Transaction Reference Number</span>
+          <span>Date and time</span>
+        </div>
+        <div  class="action-line" style="color: #334150; font-weight: 500;  font-size: 14px; line-height: 22px; ">
+          <span style="font-size: 20px;">8897374808365</span>
+          <span>07/19/2020 09:33:47</span>
+        </div>
+      </div>
+      <div style="margin-bottom: 36px;">
+        <div class="action-line" style="color: #7f8fa4; font-size: 16px; line-height: 19px; margin-bottom: 13px;">
+          <span>Payment Method</span>
+          <span>Current Balance</span>
+        </div>
+        <div  class="action-line" style="color: #334150; font-size: 14px; line-height: 22px;  font-weight: 500;">
+          <span style="font-size: 20px;">Card</span>
+          <span>₦70,135</span>
+        </div>
+      </div>
+      <div style="background-color: rgba(233, 245, 238, 0.28); border-top: 1px dashed #c9d8cf; border-bottom: 1px dashed #c9d8cf; padding-top: 14px; padding-bottom: 28px;">
+        <div class="action-line" style="color: #7f8fa4; font-size: 14px; line-height: 19px; margin-bottom: 23px;">
+          <span>Amount (NGN)</span>
+          <span>Fees</span>
+        </div>
+        <div  class="action-line" style="color: #334150; font-size: 14px; line-height: 22px; font-weight: 500; ">
+          <span style="font-size: 24px; color: #038e36; font-weight: bold;">10,000.28</span>
+          <span>₦70.05</span>
+        </div>
+      </div>
+		</div>
+		<div class="extra-message" style="color: #75818d;">Need help? Got questions to ask?
+      <div style="margin-top: 8px;">Contact us via: support@naira.com</div></div>
+	</section>
+	<section class="footer">
+		<div class="footer-message">
+			ⓒ Naira.com - Copyright 2020. All rights Reserved
+		</div>
+		<div class="social-icons">
+			<div>
+				<img src="images/instagram.png" alt="">
+			</div>
+			<div>
+				<img src="images/twitter.png" alt="">
+			</div>
+			<div>
+				<img src="images/facebook.png" alt="">
+			</div>
+		</div>
+	</section>
+</body>
+</html>

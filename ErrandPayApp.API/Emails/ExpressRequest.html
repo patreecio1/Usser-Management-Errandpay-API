@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Express Approval Request</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		@font-face {
+		  font-family: 'Inter';
+		  src: local('Inter'), url(../fonts/Inter-Regular.ttf) format('truetype');
+		}
+		@font-face {
+		  font-family: 'InterBold';
+		  src: local('InterBold'), url(../fonts/Inter-Bold.ttf) format('truetype');
+		}
+
+		* {
+		  box-sizing: border-box;
+		}
+
+		body{
+		  margin: 0;
+		  padding: 0 40px;
+		  font-family: 'Inter';
+		  color: #07121c;
+		}
+
+		.header{
+		  justify-content: center;
+		  display: flex;
+		  padding: 36px 0;
+		  border-bottom: 1px solid #d1d3d5;
+		}
+
+		.logo{
+		  height: 36px;
+		}
+
+		.content{
+		  padding: 20px 0;
+		  padding-bottom: 80px;
+		  max-width: 437px;
+		  margin: 0 auto;
+		  text-align: center;
+		}
+
+		.campaign-img{
+		  padding: 20px 0;
+		  justify-content: center;
+		  display: flex;
+		}
+
+		.campaign-img img{
+		  max-width: 100%;
+		  height: 240px;
+		}
+
+		.title{
+		  margin: 35px 0;
+		  justify-content: center;
+		  font-family: 'InterBold';
+		  font-size: 32px;
+		}
+
+		.title span {
+		  font-family: 'Inter';
+		}
+
+		.message{
+		  font-size: 20px;
+		  justify-content: center;
+		  display: flex;
+		  line-height: 29px;
+		}
+
+		.action{
+		  margin: 30px 0;
+		  justify-content: center;
+		  display: flex;
+		}
+		.action .btn{
+		  font-size: 16px;
+		  color: #FFF;
+		  padding: 20px 32px;
+		  background-color: #00b442;
+		  border-radius: 4px;
+		  font-weight: bold;
+		}
+
+		.extra-message{
+		  margin: 7px 0;
+		  flex-direction: column;
+		  justify-content: center;
+		  align-items: center;
+		  display: flex;
+		  color: #75818d;
+		  font-size: 14px;
+		}
+
+		.link{
+		  justify-content: center;
+		  display: flex;
+		  color: #ff5b00;
+		  font-size: 14px;
+		  line-height: 22px;
+		  text-decoration: underline;
+		}
+
+
+		.footer-message{
+		  font-size: 14px;
+		  margin-bottom: 20px;
+		}
+
+		.social-icons{
+		  display: flex;
+		}
+
+		.social-icons div{
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  margin: 0 6px;
+		  width: 40px;
+		  height: 40px;
+		  background-color: rgba(191, 199, 209, 0.2)
+
+		  ;
+		  border-radius: 20px;
+		}
+
+
+		.footer{
+		  justify-content: center;
+		  align-items: center;
+		  flex-direction: column;
+		  display: flex;
+		  padding: 36px 15px;
+		  background-color: #f9f9f9;
+		}
+
+		@media only screen and (max-width: 768px) {
+		  /* For mobile phones: */
+		  body{
+		    width: 100%;
+		  }
+
+		  .content{
+		    max-width: 100%;
+		  }
+		  .logo{
+		    height: 28px;
+		  }
+		  .campaign-img img{
+		    height: 180px;
+		  }
+		}
+	</style>
+</head>
+<body>
+	<section class="header">
+		<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIwIiBoZWlnaHQ9IjIzMiIgdmlld0JveD0iMCAwIDIyMCAyMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cGF0aCBkPSJNNDAuNTQ4IDU0LjA3MjdDNDAuNTQ4IDYzLjA5NzIgMzMuMjMyMyA3MC40MTMgMjQuMjA3OCA3MC40MTNDMTUuMTgzMyA3MC40MTMgNy44Njc1MiA2My4wOTcyIDcuODY3NTIgNTQuMDcyN0M3Ljg2NzUyIDQ1LjA0ODMgMTUuMTgzMyAzNy43MzI1IDI0LjIwNzggMzcuNzMyNUMzMy4yMzIzIDM3LjczMjUgNDAuNTQ4IDQ1LjA0ODMgNDAuNTQ4IDU0LjA3MjdaIiBmaWxsPSIjNDhDNUI2Ii8+DQo8cGF0aCBkPSJNMjExLjgxOCA1NC4wNzI3QzIxMS44MTggNjMuMDk3MiAyMDQuNTAyIDcwLjQxMyAxOTUuNDc4IDcwLjQxM0MxODYuNDUzIDcwLjQxMyAxNzkuMTM4IDYzLjA5NzIgMTc5LjEzOCA1NC4wNzI3QzE3OS4xMzggNDUuMDQ4MyAxODYuNDUzIDM3LjczMjUgMTk1LjQ3OCAzNy43MzI1QzIwNC41MDIgMzcuNzMyNSAyMTEuODE4IDQ1LjA0ODMgMjExLjgxOCA1NC4wNzI3WiIgZmlsbD0iI0JGQzEzNCIvPg0KPHBhdGggZD0iTTEzMy4xNDMgMTY3LjI0NEMxMzMuMTQzIDE3Ni4yNjkgMTI1LjgyNyAxODMuNTg0IDExNi44MDMgMTgzLjU4NEMxMDcuNzc4IDE4My41ODQgMTAwLjQ2MiAxNzYuMjY5IDEwMC40NjIgMTY3LjI0NEMxMDAuNDYyIDE1OC4yMiAxMDcuNzc4IDE1MC45MDQgMTE2LjgwMyAxNTAuOTA0QzEyNS44MjcgMTUwLjkwNCAxMzMuMTQzIDE1OC4yMiAxMzMuMTQzIDE2Ny4yNDRaIiBmaWxsPSIjMjM2QjFEIi8+DQo8cGF0aCBkPSJNMTkuNTE1NCAxMzUuNTQ1QzE5LjU3NTEgMTMzLjg4OSAxOC4yODEyIDEzMi40OTggMTYuNjI1NCAxMzIuNDM5QzE0Ljk2OTYgMTMyLjM3OSAxMy41NzkgMTMzLjY3MyAxMy41MTkzIDEzNS4zMjlMMTkuNTE1NCAxMzUuNTQ1Wk02NS4wOTg2IDIwNi45MzZMNTkuNjIyMSAxODMuMDYyTDM1Ljc0NzIgMTg4LjUzOEw0MS4yMjM4IDIxMi40MTNMNjUuMDk4NiAyMDYuOTM2Wk0xMy41MTkzIDEzNS4zMjlDMTMuMDEzMyAxNDkuMzY5IDE5LjMzODcgMTgxLjc5MyA0OC44Mjk2IDIwMC4yNzlMNTIuMDE2MyAxOTUuMTk1QzI0Ljk0MzYgMTc4LjIyNSAxOS4wNTcgMTQ4LjI2NSAxOS41MTU0IDEzNS41NDVMMTMuNTE5MyAxMzUuMzI5WiIgZmlsbD0iIzFEMUQ2QiIvPg0KPHBhdGggZD0iTTIwMi44OTkgMTI4LjIxNkwyMTkuNTM1IDE0Ni4xOTVMMjAxLjU1NiAxNjIuODNMMTg0LjkyIDE0NC44NTFMMjAyLjg5OSAxMjguMjE2Wk0xNjUuMTU5IDIwNy43NjlDMTYzLjY5NCAyMDguNTQyIDE2MS44NzkgMjA3Ljk4IDE2MS4xMDcgMjA2LjUxNEMxNjAuMzM0IDIwNS4wNDkgMTYwLjg5NiAyMDMuMjM0IDE2Mi4zNjIgMjAyLjQ2MUwxNjUuMTU5IDIwNy43NjlaTTIwNS4yMjUgMTQ1LjYzOUMyMDQuNjgxIDE1OS42NzggMTk1Ljk1IDE5MS41MzkgMTY1LjE1OSAyMDcuNzY5TDE2Mi4zNjIgMjAyLjQ2MUMxOTAuNjI3IDE4Ny41NjIgMTk4LjczNiAxNTguMTI1IDE5OS4yMyAxNDUuNDA3TDIwNS4yMjUgMTQ1LjYzOVoiIGZpbGw9IiMxRDFENkIiLz4NCjxwYXRoIGQ9Ik02Ni4wNDc3IDQxLjc5ODZMNzIuNTIwMiAxOC4xNzQzTDk2LjE0NDUgMjQuNjQ2OUw4OS42NzIgNDguMjcxMkw2Ni4wNDc3IDQxLjc5ODZaTTE1My41MyAzMS43OTg4QzE1NC45NiAzMi42MzQ5IDE1NS40NDIgMzQuNDcyMiAxNTQuNjA2IDM1LjkwMjdDMTUzLjc3IDM3LjMzMzEgMTUxLjkzMiAzNy44MTUgMTUwLjUwMiAzNi45Nzg5TDE1My41MyAzMS43OTg4Wk03OS42MTA3IDMwLjYxNjNDOTEuODE3NCAyMy42NTk5IDEyMy40OCAxNC4yMzU3IDE1My41MyAzMS43OTg4TDE1MC41MDIgMzYuOTc4OUMxMjIuOTE2IDIwLjg1NTkgOTMuNjQgMjkuNTI3MSA4Mi41ODE1IDM1LjgyOTJMNzkuNjEwNyAzMC42MTYzWiIgZmlsbD0iIzFEMUQ2QiIvPg0KPGNpcmNsZSBjeD0iMjQuMjA3OCIgY3k9Ijk0LjYyMDgiIHI9IjI0LjIwNzgiIGZpbGw9IiMxRDFENkIiLz4NCjxjaXJjbGUgY3g9IjE5NS40NzgiIGN5PSI5NC42MjA4IiByPSIyNC4yMDc4IiBmaWxsPSIjMUQxRDZCIi8+DQo8Y2lyY2xlIGN4PSIxMTYuODAzIiBjeT0iMjA3Ljc5MiIgcj0iMjQuMjA3OCIgZmlsbD0iIzFEMUQ2QiIvPg0KPC9zdmc+DQo="
+		alt="hr.com" >
+	</section>
+	<section class="content">
+		<div class="campaign-img">
+			<img src="images/bitmap@2x.png" alt="">
+		</div>
+		<div class="title" >
+			Express Approval Request</span>
+		</div>
+		<div class="message">
+		##NAME##
+		<br/>
+		A Request for express approval needs your attention for approval.
+		<br/>
+			Please see details below
+			<br/>
+			##EMPS##
+		</div>
+		<div class="action">
+			<span class="btn">
+				Login
+			</span>
+		</div>
+		 
+		<div class="link"> </div>
+	</section>
+	<section class="footer">
+		<div class="footer-message">
+			ⓒ Lafage.com - Copyright 2022. All rights Reserved
+		</div>
+		<div class="social-icons">
+			<div>
+				<img src="images/instagram.png" alt="">
+			</div>
+			<div>
+				<img src="images/twitter.png" alt="">
+			</div>
+			<div>
+				<img src="images/facebook.png" alt="">
+			</div>
+		</div>
+	</section>
+</body>
+</html>

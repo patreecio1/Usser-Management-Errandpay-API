@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="x-apple-disable-message-reformatting">
+    <title></title>
+
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
+
+    <style>
+        table,
+        td,
+        div,
+        h1,
+        p {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body style="margin:0;padding:0;">
+    <!-- Outer Table / Bordder  -->
+    <table role="presentation"
+        style="width:100%;border-collapse:collapse;border:0;border-spacing:0;background:#ffffff;">
+
+        <tr>
+            <td align="center" style="padding:0;">
+                <!-- Content Table  -->
+                <table role="presentation"
+                    style="width:602px;border-collapse:collapse;border:1px solid #cccccc;border-spacing:0;text-align:left;">
+                    <!-- Header / Logo Column  -->
+                    <tr>
+                        <td align="center" style="padding:40px 0 30px 0;background:#dcf5ff;">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIwIiBoZWlnaHQ9IjIzMiIgdmlld0JveD0iMCAwIDIyMCAyMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cGF0aCBkPSJNNDAuNTQ4IDU0LjA3MjdDNDAuNTQ4IDYzLjA5NzIgMzMuMjMyMyA3MC40MTMgMjQuMjA3OCA3MC40MTNDMTUuMTgzMyA3MC40MTMgNy44Njc1MiA2My4wOTcyIDcuODY3NTIgNTQuMDcyN0M3Ljg2NzUyIDQ1LjA0ODMgMTUuMTgzMyAzNy43MzI1IDI0LjIwNzggMzcuNzMyNUMzMy4yMzIzIDM3LjczMjUgNDAuNTQ4IDQ1LjA0ODMgNDAuNTQ4IDU0LjA3MjdaIiBmaWxsPSIjNDhDNUI2Ii8+DQo8cGF0aCBkPSJNMjExLjgxOCA1NC4wNzI3QzIxMS44MTggNjMuMDk3MiAyMDQuNTAyIDcwLjQxMyAxOTUuNDc4IDcwLjQxM0MxODYuNDUzIDcwLjQxMyAxNzkuMTM4IDYzLjA5NzIgMTc5LjEzOCA1NC4wNzI3QzE3OS4xMzggNDUuMDQ4MyAxODYuNDUzIDM3LjczMjUgMTk1LjQ3OCAzNy43MzI1QzIwNC41MDIgMzcuNzMyNSAyMTEuODE4IDQ1LjA0ODMgMjExLjgxOCA1NC4wNzI3WiIgZmlsbD0iI0JGQzEzNCIvPg0KPHBhdGggZD0iTTEzMy4xNDMgMTY3LjI0NEMxMzMuMTQzIDE3Ni4yNjkgMTI1LjgyNyAxODMuNTg0IDExNi44MDMgMTgzLjU4NEMxMDcuNzc4IDE4My41ODQgMTAwLjQ2MiAxNzYuMjY5IDEwMC40NjIgMTY3LjI0NEMxMDAuNDYyIDE1OC4yMiAxMDcuNzc4IDE1MC45MDQgMTE2LjgwMyAxNTAuOTA0QzEyNS44MjcgMTUwLjkwNCAxMzMuMTQzIDE1OC4yMiAxMzMuMTQzIDE2Ny4yNDRaIiBmaWxsPSIjMjM2QjFEIi8+DQo8cGF0aCBkPSJNMTkuNTE1NCAxMzUuNTQ1QzE5LjU3NTEgMTMzLjg4OSAxOC4yODEyIDEzMi40OTggMTYuNjI1NCAxMzIuNDM5QzE0Ljk2OTYgMTMyLjM3OSAxMy41NzkgMTMzLjY3MyAxMy41MTkzIDEzNS4zMjlMMTkuNTE1NCAxMzUuNTQ1Wk02NS4wOTg2IDIwNi45MzZMNTkuNjIyMSAxODMuMDYyTDM1Ljc0NzIgMTg4LjUzOEw0MS4yMjM4IDIxMi40MTNMNjUuMDk4NiAyMDYuOTM2Wk0xMy41MTkzIDEzNS4zMjlDMTMuMDEzMyAxNDkuMzY5IDE5LjMzODcgMTgxLjc5MyA0OC44Mjk2IDIwMC4yNzlMNTIuMDE2MyAxOTUuMTk1QzI0Ljk0MzYgMTc4LjIyNSAxOS4wNTcgMTQ4LjI2NSAxOS41MTU0IDEzNS41NDVMMTMuNTE5MyAxMzUuMzI5WiIgZmlsbD0iIzFEMUQ2QiIvPg0KPHBhdGggZD0iTTIwMi44OTkgMTI4LjIxNkwyMTkuNTM1IDE0Ni4xOTVMMjAxLjU1NiAxNjIuODNMMTg0LjkyIDE0NC44NTFMMjAyLjg5OSAxMjguMjE2Wk0xNjUuMTU5IDIwNy43NjlDMTYzLjY5NCAyMDguNTQyIDE2MS44NzkgMjA3Ljk4IDE2MS4xMDcgMjA2LjUxNEMxNjAuMzM0IDIwNS4wNDkgMTYwLjg5NiAyMDMuMjM0IDE2Mi4zNjIgMjAyLjQ2MUwxNjUuMTU5IDIwNy43NjlaTTIwNS4yMjUgMTQ1LjYzOUMyMDQuNjgxIDE1OS42NzggMTk1Ljk1IDE5MS41MzkgMTY1LjE1OSAyMDcuNzY5TDE2Mi4zNjIgMjAyLjQ2MUMxOTAuNjI3IDE4Ny41NjIgMTk4LjczNiAxNTguMTI1IDE5OS4yMyAxNDUuNDA3TDIwNS4yMjUgMTQ1LjYzOVoiIGZpbGw9IiMxRDFENkIiLz4NCjxwYXRoIGQ9Ik02Ni4wNDc3IDQxLjc5ODZMNzIuNTIwMiAxOC4xNzQzTDk2LjE0NDUgMjQuNjQ2OUw4OS42NzIgNDguMjcxMkw2Ni4wNDc3IDQxLjc5ODZaTTE1My41MyAzMS43OTg4QzE1NC45NiAzMi42MzQ5IDE1NS40NDIgMzQuNDcyMiAxNTQuNjA2IDM1LjkwMjdDMTUzLjc3IDM3LjMzMzEgMTUxLjkzMiAzNy44MTUgMTUwLjUwMiAzNi45Nzg5TDE1My41MyAzMS43OTg4Wk03OS42MTA3IDMwLjYxNjNDOTEuODE3NCAyMy42NTk5IDEyMy40OCAxNC4yMzU3IDE1My41MyAzMS43OTg4TDE1MC41MDIgMzYuOTc4OUMxMjIuOTE2IDIwLjg1NTkgOTMuNjQgMjkuNTI3MSA4Mi41ODE1IDM1LjgyOTJMNzkuNjEwNyAzMC42MTYzWiIgZmlsbD0iIzFEMUQ2QiIvPg0KPGNpcmNsZSBjeD0iMjQuMjA3OCIgY3k9Ijk0LjYyMDgiIHI9IjI0LjIwNzgiIGZpbGw9IiMxRDFENkIiLz4NCjxjaXJjbGUgY3g9IjE5NS40NzgiIGN5PSI5NC42MjA4IiByPSIyNC4yMDc4IiBmaWxsPSIjMUQxRDZCIi8+DQo8Y2lyY2xlIGN4PSIxMTYuODAzIiBjeT0iMjA3Ljc5MiIgcj0iMjQuMjA3OCIgZmlsbD0iIzFEMUQ2QiIvPg0KPC9zdmc+DQo="
+                                alt="logo" width="120" style="height:auto;display:block;" />
+                        </td>
+                    </tr>
+                    <!-- Main Content Column  -->
+                    <tr>
+					  <tr>
+                        <td style="padding:10px; background: #e80c1e;">
+                            <p
+                                style="margin: 0; font-style: italic; font-weight: 100; font-size: small; color: #ffffff;">
+                                 REJECTED  
+                            </p>
+                        </td>
+                    </tr>
+                        <td style="padding:36px 30px 42px 30px;">
+                            <h1 style="font-size:24px;margin:0 0 20px 0;font-family:Arial,sans-serif;">
+                                Express Approval Rejection Notice</h1>
+
+                            <p style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                Hello ##NAME##,</p>
+
+                            <p style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                A request for express approval for Labour Request initiated by you has been approved.
+                                <br />
+                                Please find below the approval details:
+                            </p>
+	<hr>
+                            <p style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                Request Date: ##REQUESTDATE##
+                                <br>
+                                Requester: ##REQUESTER##
+                                <br />
+                                Request Comment: ##REQUESTERCOMMENT##
+                            </p>
+							<hr>
+							<br/>
+							 <p style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                Approval Date: ##FIRSTAPPROVERDATE##
+                                <br>
+                                Approver: ##FIRSTAPPROVER##
+                                <br />
+                                 Comment: ##FIRSTAPPROVEROMMENT##
+                            </p>
+								<hr>
+							<br/>
+							 <p style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                Approval Date: ##SECONDAPPROVERDATE##
+                                <br>
+                                Approver: ##SECONDAPPROVER##
+                                <br />
+                                 Comment: ##SECONDAPPROVEROMMENT##
+                            </p>
+								<hr>
+                        </td>
+                    </tr>
+						<hr>
+					
+					
+                                <tr>
+                                    <td style="width:260px;padding:0;vertical-align:top;color:#153643;">
+									
+									  <p
+                                            style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;text-align:center;">
+                                            <b>Request Summary</b></p>
+
+                                        <table role="presentation"
+                                            style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
+                                            <tr>
+                                                <td style="width:260px;padding:0;vertical-align:top;">
+                                                    <p
+                                                        style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                                        <b>Date</b></p>
+                                                </td>
+
+                                                <td style="width:20px;padding:0;font-size:0;line-height:0;">&nbsp;</td>
+
+                                                <td style="width:260px;padding:0;vertical-align:top;">
+                                                    <p
+                                                        style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                                        ##Date##</p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="width:260px;padding:0;vertical-align:top;">
+                                                    <p
+                                                        style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                                        <b>Reference</b></p>
+                                                </td>
+
+                                                <td style="width:20px;padding:0;font-size:0;line-height:0;">&nbsp;</td>
+
+                                                <td style="width:260px;padding:0;vertical-align:top;">
+                                                    <p
+                                                        style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                                        ##Reference##</p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="width:260px;padding:0;vertical-align:top;">
+                                                    <p
+                                                        style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                                        <b>Description</b></p>
+                                                </td>
+
+                                                <td style="width:20px;padding:0;font-size:0;line-height:0;">&nbsp;</td>
+
+                                                <td style="width:260px;padding:0;vertical-align:top;">
+                                                    <p
+                                                        style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                                        ##Description##</p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="width:260px;padding:0;vertical-align:top;">
+                                                    <p
+                                                        style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                                        <b>Justification</b></p>
+                                                </td>
+
+                                                <td style="width:20px;padding:0;font-size:0;line-height:0;">&nbsp;</td>
+
+                                                <td style="width:260px;padding:0;vertical-align:top;">
+                                                    <p
+                                                        style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                                        ##Justification##</p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="width:260px;padding:0;vertical-align:top;">
+                                                    <p
+                                                        style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                                        <b>Number of Staff</b></p>
+                                                </td>
+
+                                                <td style="width:20px;padding:0;font-size:0;line-height:0;">&nbsp;</td>
+
+                                                <td style="width:260px;padding:0;vertical-align:top;">
+                                                    <p
+                                                        style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                                        ##NoOfStaff##</p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="width:260px;padding:0;vertical-align:top;">
+                                                    <p
+                                                        style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                                        <b>Expected Start Date</b></p>
+                                                </td>
+
+                                                <td style="width:20px;padding:0;font-size:0;line-height:0;">&nbsp;</td>
+
+                                                <td style="width:260px;padding:0;vertical-align:top;">
+                                                    <p
+                                                        style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                                        ##ExpectedStartDate##</p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="width:260px;padding:0;vertical-align:top;">
+                                                    <p
+                                                        style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                                        <b>Duration</b></p>
+                                                </td>
+
+                                                <td style="width:20px;padding:0;font-size:0;line-height:0;">&nbsp;</td>
+
+                                                <td style="width:260px;padding:0;vertical-align:top;">
+                                                    <p
+                                                        style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                                        ##Duration##</p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="width:260px;padding:0;vertical-align:top;">
+                                                    <p
+                                                        style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                                        <b>Budget Cost</b></p>
+                                                </td>
+
+                                                <td style="width:20px;padding:0;font-size:0;line-height:0;">&nbsp;</td>
+
+                                                <td style="width:260px;padding:0;vertical-align:top;">
+                                                    <p
+                                                        style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                                        ##Budget Cost##</p>
+                                                </td>
+                                            </tr>
+											<hr style="border: 10px solid green;border-radius: 5px;">
+                                        </table>
+										<hr style="border: 10px solid green;border-radius: 5px;">
+                                    </td>
+                                </tr>
+                    <!-- Footer Column  -->
+                    <tr>
+                        <td style="padding:10px; background: #3ac73e;">
+                            <p
+                                style="margin: 0; font-style: italic; font-weight: 100; font-size: small; color: #ffffff;">
+                                © Lafarge <span id="year"></span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+    </table>
+</body>
+
+<script>
+    let date = new Date();
+    document.getElementById('year').innerHTML = date.getFullYear();
+</script>
+
+</html>

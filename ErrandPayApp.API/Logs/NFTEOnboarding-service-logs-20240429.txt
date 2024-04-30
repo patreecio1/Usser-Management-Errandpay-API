@@ -1,0 +1,41 @@
+2024-04-29T20:27:02.4817398+01:00  [INF] Entity Framework Core "5.0.6" initialized '"APPContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2024-04-29T20:27:03.1777344+01:00  [INF] Executed DbCommand ("42"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-04-29T20:27:03.2321948+01:00  [INF] Executed DbCommand ("35"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-04-29T20:27:03.2362507+01:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-04-29T20:27:03.2369541+01:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-04-29T20:27:03.2769372+01:00  [INF] Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-04-29T20:27:03.3057823+01:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2024-04-29T20:27:03.6886897+01:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PermissionName]
+FROM [Permissions] AS [p]" (0723d8ff)
+2024-04-29T20:27:03.7975698+01:00  [INF] Executed DbCommand ("19"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[City], [a].[Country], [a].[CreatedBy], [a].[CreatedDate], [a].[DateAccountLocked], [a].[Email], [a].[EmailConfirmationDate], [a].[FirstName], [a].[IsActive], [a].[IsDeleted], [a].[IsEmailConfirmed], [a].[IsLockedOut], [a].[IsSuperAdmin], [a].[LastLogin], [a].[LockoutCounter], [a].[ModifiedBy], [a].[ModifiedDate], [a].[MustChangePassword], [a].[No], [a].[Password], [a].[PhoneNumber], [a].[Road], [a].[State], [a].[SurName], [a].[Telephone], [a].[Title]
+FROM [AppUsers] AS [a]
+WHERE [a].[IsSuperAdmin] = CAST(1 AS bit)" (0723d8ff)
+2024-04-29T20:27:04.1359102+01:00  [INF] Executed DbCommand ("50"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTimeOffset), @p4='?' (DbType = DateTime2), @p5='?' (Size = 450), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = Boolean), @p13='?' (DbType = DateTime2), @p14='?' (DbType = Int32), @p15='?' (Size = 4000), @p16='?' (DbType = DateTimeOffset), @p17='?' (DbType = Boolean), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (Size = 4000), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (Size = 4000), @p25='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([City], [Country], [CreatedBy], [CreatedDate], [DateAccountLocked], [Email], [EmailConfirmationDate], [FirstName], [IsActive], [IsDeleted], [IsEmailConfirmed], [IsLockedOut], [IsSuperAdmin], [LastLogin], [LockoutCounter], [ModifiedBy], [ModifiedDate], [MustChangePassword], [No], [Password], [PhoneNumber], [Road], [State], [SurName], [Telephone], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25);
+SELECT [Id]
+FROM [AppUsers]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2024-04-29T20:27:04.2026620+01:00  [INF] Super user registration failed (459a0af6)
+2024-04-29T20:27:04.2533474+01:00  [INF] User profile is available. Using '"C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2024-04-29T20:27:04.6174990+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-04-29T20:27:04.6300069+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-04-29T20:27:04.6325516+01:00  [INF] Content root path: "C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.API" (b5d60022)
+2024-04-29T20:27:04.6720366+01:00 8000000f-0001-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/index.html - - (ca22a1cb)
+2024-04-29T20:27:05.0633598+01:00 8000000f-0001-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/index.html - - - 200 - text/html;charset=utf-8 393.7171ms (791a596a)
+2024-04-29T20:27:05.2109360+01:00 800000f1-0005-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/_framework/aspnetcore-browser-refresh.js - - (ca22a1cb)
+2024-04-29T20:27:05.2117624+01:00 80000029-0005-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/_vs/browserLink - - (ca22a1cb)
+2024-04-29T20:27:05.2523010+01:00 800000f1-0005-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 36.8707ms (791a596a)
+2024-04-29T20:27:05.3129942+01:00 80000029-0005-fa00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 101.1960ms (791a596a)
+2024-04-29T20:27:05.4602533+01:00 80000089-0006-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - (ca22a1cb)
+2024-04-29T20:27:05.6515131+01:00 80000089-0006-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 191.2356ms (791a596a)

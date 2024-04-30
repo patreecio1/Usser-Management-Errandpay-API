@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Invoice</title>
+    <style media="screen">
+        body {
+            font-family: 'Segoe UI','Microsoft Sans Serif',sans-serif;
+        }
+
+        /*
+            These next two styles are apparently the modern way to clear a float. This allows the logo
+            and the word "Invoice" to remain above the From and To sections. Inserting an empty div
+            between them with clear:both also works but is bad style.
+            Reference:
+            http://stackoverflow.com/questions/490184/what-is-the-best-way-to-clear-the-css-style-float
+        */
+        header:before, header:after {
+            content: " ";
+            display: table;
+        }
+
+        header:after {
+            clear: both;
+        }
+
+        .invoiceNbr {
+            font-size: 40px;
+            margin-right: 30px;
+            margin-top: 30px;
+            float: right;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .from {
+            float: left;
+        }
+
+        .to {
+            float: right;
+        }
+
+        .fromto {
+            border-style: solid;
+            border-width: 1px;
+            border-color: #e8e5e5;
+            border-radius: 5px;
+            margin: 20px;
+            min-width: 200px;
+        }
+
+        .fromtocontent {
+            margin: 10px;
+            margin-right: 15px;
+        }
+
+        .panel {
+            background-color: #e8e5e5;
+            padding: 7px;
+        }
+
+        .items {
+            clear: both;
+            display: table;
+            padding: 20px;
+        }
+
+        /* Factor out common styles for all of the "col-" classes.*/
+        div[class^="col-"] {
+            display: table-cell;
+            padding: 7px;
+        }
+
+        /*for clarity name column styles by the percentage of width */
+        .col-1-10 {
+            width: 10%;
+        }
+
+        .col-1-52 {
+            width: 52%;
+        }
+
+        .row {
+            display: table-row;
+            page-break-inside: avoid;
+        }
+
+    </style>
+
+    <!-- These styles are exactly like the screen styles except they use points (pt) as units
+        of measure instead of pixels (px) -->
+    <style media="print">
+        body {
+            font-family: 'Segoe UI','Microsoft Sans Serif',sans-serif;
+        }
+
+        header:before, header:after {
+            content: " ";
+            display: table;
+        }
+
+        header:after {
+            clear: both;
+        }
+
+        .invoiceNbr {
+            font-size: 30pt;
+            margin-right: 30pt;
+            margin-top: 30pt;
+            float: right;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .from {
+            float: left;
+        }
+
+        .to {
+            float: right;
+        }
+
+        .fromto {
+            border-style: solid;
+            border-width: 1pt;
+            border-color: #e8e5e5;
+            border-radius: 5pt;
+            margin: 20pt;
+            min-width: 200pt;
+        }
+
+        .fromtocontent {
+            margin: 10pt;
+            margin-right: 15pt;
+        }
+
+        .panel {
+            background-color: #e8e5e5;
+            padding: 7pt;
+        }
+
+        .items {
+            clear: both;
+            display: table;
+            padding: 20pt;
+        }
+
+        div[class^="col-"] {
+            display: table-cell;
+            padding: 7pt;
+        }
+
+        .col-1-10 {
+            width: 10%;
+        }
+
+        .col-1-52 {
+            width: 52%;
+        }
+
+        .row {
+            display: table-row;
+            page-break-inside: avoid;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="holcim_logo_color.svg" alt="generic business logo" height="181" width="167" />
+        </div>
+        <div class="invoiceNbr">
+            Movement Request ##Reference##
+            <br />
+            Status: ##Status##
+        </div>
+    </header>
+
+    <div class="fromto from">
+        <div class="panel">Requester</div>
+        <div class="fromtocontent">
+           <span>Name: </span> <span>##RequesterName##</span><br />
+         <span>Function: </span>   <span>##RequesterFunction##</span><br />
+          <span>Unit:</span> <span>##RequesterUnit##</span><br />
+		  <span>Designation: </span>   <span>##RequesterDesignation##</span><br />
+          <span>Date:</span> <span>##RequesterDate##</span><br />
+        </div>
+    </div>
+    <div class="fromto to">
+        <div class="panel">TO:</div>
+        <div class="fromtocontent">
+            <span>Someone</span><br />
+            <span>123 Street St.</span><br />
+            <span>Portland ME, 04101</span>
+        </div>
+    </div>
+
+    <section class="items">
+  <div class="row panel">
+            <div class="col-1-10">
+              Employee Details
+            </div>
+            <div class="col-1-10">
+ 
+            </div>
+            <div class="col-1-10">
+
+            </div>
+            <div class="col-1-10">
+             
+            </div>
+            <div class="col-1-10">
+                
+            </div>
+        </div>
+        <!-- your favorite templating/data-binding library would come in handy here to generate these rows dynamically !-->
+        <div class="row">
+            <div class="col-1-10 panel">
+                Employee Name
+            </div>
+            <div class="col-1-10 panel">
+                SAP Number
+            </div>
+            <div class="col-1-10 panel">
+                Function
+            </div>
+            <div class="col-1-10 panel">
+                Unit
+            </div>
+            <div class="col-1-10 panel">
+                Location 
+            </div>
+        </div>
+
+      
+        <div class="row">
+            <div class="col-1-10">
+               ##EmployeeName##
+            </div>
+            <div class="col-1-10">
+                ##EmployeeSAPNumber##
+            </div>
+            <div class="col-1-10">
+               ##EmployeeCurrentFunction##
+            </div>
+            <div class="col-1-10">
+               ##EmployeeUnit##
+            </div>
+            <div class="col-1-10">
+               ##EmployeeCurrentLocation##
+            </div>
+        </div>
+   
+        <div class="row panel">
+            <div class="col-1-10">
+
+            </div>
+            <div class="col-1-10">
+
+            </div>
+            <div class="col-1-10">
+
+            </div>
+            <div class="col-1-10">
+             
+            </div>
+            <div class="col-1-10">
+                
+            </div>
+        </div>
+		   <div class="row">
+            <div class="col-1-10 panel">
+                N+1
+            </div>
+            <div class="col-1-10 panel">
+                 Band
+            </div>
+            <div class="col-1-10 panel">
+                Designation
+            </div>
+            <div class="col-1-10 panel">
+             Date Assumed Current Role
+            </div>
+            <div class="col-1-10 panel">
+                Last Promotion Date
+            </div>
+        </div>
+		
+		    <div class="row">
+            <div class="col-1-10">
+                ##EmployeeNPlus1##
+            </div>
+            <div class="col-1-10">
+              ##EmployeeBand##
+            </div>
+            <div class="col-1-10">
+                 ##EmployeeDesignation##
+            </div>
+            <div class="col-1-10">
+              ##DatAssumeCurrentRole##
+            </div>
+            <div class="col-1-10">
+               ##LastPromotionDate##
+            </div>
+        </div>
+		
+		<br />
+		<br />
+		<div class="row panel">
+            <div class="col-1-10">
+              
+Proposed Movement
+            </div>
+            <div class="col-1-10">
+ 
+            </div>
+            <div class="col-1-10">
+
+            </div>
+            <div class="col-1-10">
+             
+            </div>
+            <div class="col-1-10">
+                
+            </div>
+        </div>
+        <!-- your favorite templating/data-binding library would come in handy here to generate these rows dynamically !-->
+        <div class="row">
+            <div class="col-1-10 panel">
+               Proposed Designation
+            </div>
+            <div class="col-1-10 panel">
+                 Proposed Function
+            </div>
+            <div class="col-1-10 panel">
+                 Proposed Unit
+            </div>
+            <div class="col-1-10 panel">
+                Location
+            </div>
+            <div class="col-1-10 panel">
+                Proposed Band
+            </div>
+        </div>
+
+      
+        <div class="row">
+            <div class="col-1-10">
+            ##ProposedDesignation##
+            </div>
+            <div class="col-1-10">
+              ##ProposedFunction##
+            </div>
+            <div class="col-1-10">
+             ##ProposedUnit##
+            </div>
+            <div class="col-1-10">
+              ##ProposedLocation##
+            </div>
+            <div class="col-1-10">
+             ##ProposedBand##
+            </div>
+        </div>
+		
+		  <div class="row panel">
+            <div class="col-1-10">
+
+            </div>
+            <div class="col-1-10">
+
+            </div>
+            <div class="col-1-10">
+
+            </div>
+            <div class="col-1-10">
+             
+            </div>
+            <div class="col-1-10">
+                
+            </div>
+        </div>
+		   <div class="row">
+            <div class="col-1-10 panel">
+                 Proposed N+1
+            </div>
+            <div class="col-1-10 panel">
+               Proposed Cost Center
+            </div>
+            <div class="col-1-10 panel">
+                Effective Date
+            </div>
+            <div class="col-1-10 panel">
+            
+            </div>
+            <div class="col-1-10 panel">
+                
+            </div>
+        </div>
+		
+		    <div class="row">
+            <div class="col-1-10">
+            ##ProposedNPlus1##
+            </div>
+            <div class="col-1-10">
+            ##ProposedCostCenter##
+            </div>
+            <div class="col-1-10">
+              ##EffectiveDate##
+            </div>
+            <div class="col-1-10">
+
+            </div>
+            <div class="col-1-10">
+              
+            </div>
+        </div>
+		
+		<br />
+		<br />
+		
+		<div class="row panel">
+            <div class="col-1-10">
+              
+             Role Details
+            </div>
+            <div class="col-1-10">
+ 
+            </div>
+            <div class="col-1-10">
+
+            </div>
+            <div class="col-1-10">
+             
+            </div>
+            <div class="col-1-52">
+                
+            </div>
+        </div>
+        <!-- your favorite templating/data-binding library would come in handy here to generate these rows dynamically !-->
+        <div class="row">
+            <div class="col-1-10 panel">
+             Type Of Movement
+            </div>
+            <div class="col-1-10 panel">
+                 System Requirements
+            </div>
+            <div class="col-1-10 panel">
+                 Date Vacancy Occured
+            </div>
+            <div class="col-1-10 panel">
+                 Reason For Vacancy
+            </div>
+            <div class="col-1-52 panel">
+                Justification For Vacancy
+            </div>
+        </div>
+
+      
+        <div class="row">
+            <div class="col-1-10">
+           ##TypeOfMovement##
+            </div>
+            <div class="col-1-10">
+             ##SystemRequirementForNewRole##
+            </div>
+            <div class="col-1-10">
+           ##DateVacancyOccured##
+            </div>
+            <div class="col-1-10">
+          ##ReasonForVacancy##
+            </div>
+            <div class="col-1-52">
+           ##JustificationForVacancy##
+            </div>
+        </div>
+			<br />
+		    <br />
+		
+
+	<div class="row panel">
+            <div class="col-1-10">
+              
+            
+Succession Plan,Transition & Performance
+            </div>
+            <div class="col-1-10">
+ 
+            </div>
+            <div class="col-1-10">
+
+            </div>
+            <div class="col-1-10">
+             
+            </div>
+            <div class="col-1-52">
+                
+            </div>
+        </div>
+        <!-- your favorite templating/data-binding library would come in handy here to generate these rows dynamically !-->
+        <div class="row">
+            <div class="col-1-10 panel">
+             Last year Performance
+            </div>
+            <div class="col-1-10 panel">
+                 Two Years Performance
+            </div>
+            <div class="col-1-10 panel">
+                Three Years Performance
+            </div>
+            <div class="col-1-10 panel">
+               Succession Plan Ready
+            </div>
+            <div class="col-1-52 panel">
+              ##IdentifiedGaps##
+            </div>
+        </div>
+
+      
+        <div class="row">
+            <div class="col-1-10">
+            ##PerformanceLastYear##
+            </div>
+            <div class="col-1-10">
+            ##TwoYearsPerformance##
+            </div>
+            <div class="col-1-10">
+           ##ThreeYearsPerformance##
+            </div>
+            <div class="col-1-10">
+          ##SuccessionPlanReady##
+            </div>
+            <div class="col-1-52">
+           ##IdentifiedGaps##
+            </div>
+        </div>
+			<br />
+		  
+
+	
+    </section>
+	
+		    <section class="items">
+			 <div class="row panel">
+            <div class="col-1-10">
+              
+            
+             Approvals
+            </div>
+            <div class="col-1-10">
+ 
+            </div>
+            <div class="col-1-10">
+
+            </div>
+            <div class="col-1-10">
+             
+            </div>
+            <div class="col-1-10">
+                
+            </div>
+			  <div class="col-1-10">
+                
+            </div>
+        </div>
+		
+		
+			</section>
+			<hr>
+			<hr>
+			##REPORTCONTENT##
+</body>
+</html>

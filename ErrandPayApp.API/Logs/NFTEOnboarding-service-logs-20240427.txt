@@ -1,0 +1,223 @@
+2024-04-27T16:08:56.6094970+01:00  [INF] Entity Framework Core "5.0.6" initialized '"APPContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2024-04-27T16:08:58.5450096+01:00  [INF] Executed DbCommand ("52"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-04-27T16:08:58.6381699+01:00  [INF] Executed DbCommand ("58"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-04-27T16:08:58.6449240+01:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-04-27T16:08:58.6460299+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-04-27T16:08:58.7191336+01:00  [INF] Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-04-27T16:08:58.7650110+01:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2024-04-27T16:08:59.7441908+01:00  [INF] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PermissionName]
+FROM [Permissions] AS [p]" (0723d8ff)
+2024-04-27T16:09:00.2141862+01:00  [INF] Executed DbCommand ("233"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[City], [a].[Country], [a].[CreatedBy], [a].[CreatedDate], [a].[DateAccountLocked], [a].[Email], [a].[EmailConfirmationDate], [a].[FirstName], [a].[IsActive], [a].[IsDeleted], [a].[IsEmailConfirmed], [a].[IsLockedOut], [a].[IsSuperAdmin], [a].[LastLogin], [a].[LockoutCounter], [a].[ModifiedBy], [a].[ModifiedDate], [a].[MustChangePassword], [a].[No], [a].[Password], [a].[PhoneNumber], [a].[Road], [a].[State], [a].[SurName], [a].[Telephone], [a].[Title]
+FROM [AppUsers] AS [a]
+WHERE [a].[IsSuperAdmin] = CAST(1 AS bit)" (0723d8ff)
+2024-04-27T16:09:01.4858446+01:00  [INF] User profile is available. Using '"C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2024-04-27T16:09:01.8468256+01:00  [ERR] Message => One or more errors occurred. (Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.)|Stacktrace =>    at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.InitializeSupperUser(IServiceScope scope) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 87|InnerException => System.InvalidOperationException: Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at ErrandPayApp.Data.Repositories.UserRepository.CreateDefaultUser() in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Data\Repositories\UserRepository.cs:line 307 (2a14ea4d)
+System.AggregateException: One or more errors occurred. (Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.)
+ ---> System.InvalidOperationException: Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at ErrandPayApp.Data.Repositories.UserRepository.CreateDefaultUser() in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Data\Repositories\UserRepository.cs:line 307
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.InitializeSupperUser(IServiceScope scope) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 87
+2024-04-27T16:09:03.3153534+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-04-27T16:09:03.3429186+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-04-27T16:09:03.3616927+01:00  [INF] Content root path: "C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.API" (b5d60022)
+2024-04-27T16:09:03.5310258+01:00 80000030-0004-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/index.html - - (ca22a1cb)
+2024-04-27T16:09:05.1051689+01:00 80000030-0004-fb00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/index.html - - - 200 - text/html;charset=utf-8 1578.7417ms (791a596a)
+2024-04-27T16:09:05.8133651+01:00 8000005d-0006-f900-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/_framework/aspnetcore-browser-refresh.js - - (ca22a1cb)
+2024-04-27T16:09:05.8162923+01:00 80000032-0004-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/_vs/browserLink - - (ca22a1cb)
+2024-04-27T16:09:05.9494941+01:00 8000005d-0006-f900-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 135.0677ms (791a596a)
+2024-04-27T16:09:06.2235959+01:00 80000032-0004-fb00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 407.2380ms (791a596a)
+2024-04-27T16:09:06.4363388+01:00 80000034-0004-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - (ca22a1cb)
+2024-04-27T16:09:07.0617969+01:00 80000034-0004-fb00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 625.3197ms (791a596a)
+2024-04-27T16:10:50.3515121+01:00 80000041-0005-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44331/api/Accounts application/json 62 (ca22a1cb)
+2024-04-27T16:10:50.3715436+01:00 80000041-0005-fd00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2024-04-27T16:10:50.8738951+01:00 80000041-0005-fd00-b63f-84710c7967bb [INF] Executing endpoint '"ErrandPayApp.API.Controllers.AccountsController.Login (ErrandPayApp.API)"' (500cc934)
+2024-04-27T16:10:50.9645494+01:00 80000041-0005-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Login\", controller = \"Accounts\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ErrandPayApp.API.RequestVms.LoginVm)" on controller "ErrandPayApp.API.Controllers.AccountsController" ("ErrandPayApp.API"). (122b2fdf)
+2024-04-27T16:10:51.3808517+01:00 80000041-0005-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("158"ms) [Parameters=["@__email_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Email], [a].[PhoneNumber], [a].[SurName], [a].[FirstName], [a].[IsSuperAdmin], [a].[Id], [a].[MustChangePassword], [a].[LockoutCounter], [a].[IsLockedOut], [a].[LastLogin], [a].[DateAccountLocked], [a].[Title], [a].[No], [a].[Road], [a].[City], [a].[State], [a].[Country]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @__email_0" (0723d8ff)
+2024-04-27T16:10:51.4807469+01:00 80000041-0005-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("26"ms) [Parameters=["@__email_0='?' (Size = 450), @__ToSha256_1='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Email], [a].[PhoneNumber], [a].[SurName], [a].[FirstName], [a].[IsSuperAdmin], [a].[Id], [a].[MustChangePassword], [a].[LockoutCounter], [a].[IsLockedOut], [a].[LastLogin], [a].[DateAccountLocked], [a].[Title], [a].[No], [a].[Road], [a].[City], [a].[State], [a].[Country]
+FROM [AppUsers] AS [a]
+WHERE ([a].[Email] = @__email_0) AND ([a].[Password] = @__ToSha256_1)" (0723d8ff)
+2024-04-27T16:10:51.5319042+01:00 80000041-0005-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("23"ms) [Parameters=["@__email_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[City], [a].[Country], [a].[CreatedBy], [a].[CreatedDate], [a].[DateAccountLocked], [a].[Email], [a].[EmailConfirmationDate], [a].[FirstName], [a].[IsActive], [a].[IsDeleted], [a].[IsEmailConfirmed], [a].[IsLockedOut], [a].[IsSuperAdmin], [a].[LastLogin], [a].[LockoutCounter], [a].[ModifiedBy], [a].[ModifiedDate], [a].[MustChangePassword], [a].[No], [a].[Password], [a].[PhoneNumber], [a].[Road], [a].[State], [a].[SurName], [a].[Telephone], [a].[Title]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @__email_0" (0723d8ff)
+2024-04-27T16:10:56.9854483+01:00 80000041-0005-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("29"ms) [Parameters=["@p3='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTimeOffset)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [AppUsers] SET [LockoutCounter] = @p0, [ModifiedBy] = @p1, [ModifiedDate] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2024-04-27T16:10:57.7488511+01:00 80000041-0005-fd00-b63f-84710c7967bb [INF] Executing JsonResult, writing value of type '"ErrandPayApp.Core.Models.ResponseModel`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (2f513669)
+2024-04-27T16:10:57.8029174+01:00 80000041-0005-fd00-b63f-84710c7967bb [INF] Executed action "ErrandPayApp.API.Controllers.AccountsController.Login (ErrandPayApp.API)" in 6805.0791ms (afa2e885)
+2024-04-27T16:10:57.8045858+01:00 80000041-0005-fd00-b63f-84710c7967bb [INF] Executed endpoint '"ErrandPayApp.API.Controllers.AccountsController.Login (ErrandPayApp.API)"' (99874f2b)
+2024-04-27T16:10:57.8239262+01:00 80000041-0005-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44331/api/Accounts application/json 62 - 400 - application/json 7472.4313ms (791a596a)
+2024-04-27T16:17:41.1302918+01:00 800000cf-0002-f900-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44331/api/User application/json 319 (ca22a1cb)
+2024-04-27T16:17:41.1310185+01:00 800000cf-0002-f900-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2024-04-27T16:17:41.1383821+01:00 800000cf-0002-f900-b63f-84710c7967bb [INF] Executing endpoint '"ErrandPayApp.API.Controllers.UserController.CreateUser (ErrandPayApp.API)"' (500cc934)
+2024-04-27T16:17:41.1911181+01:00 800000cf-0002-f900-b63f-84710c7967bb [INF] Route matched with "{action = \"CreateUser\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(ErrandPayApp.API.RequestVms.UserVm)" on controller "ErrandPayApp.API.Controllers.UserController" ("ErrandPayApp.API"). (122b2fdf)
+2024-04-27T16:17:45.3569251+01:00 800000cf-0002-f900-b63f-84710c7967bb [INF] Executed DbCommand ("24"ms) [Parameters=["@__email_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Email], [a].[PhoneNumber], [a].[SurName], [a].[FirstName], [a].[IsSuperAdmin], [a].[Id], [a].[MustChangePassword], [a].[LockoutCounter], [a].[IsLockedOut], [a].[LastLogin], [a].[DateAccountLocked], [a].[Title], [a].[No], [a].[Road], [a].[City], [a].[State], [a].[Country]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @__email_0" (0723d8ff)
+2024-04-27T16:17:48.0031680+01:00 800000cf-0002-f900-b63f-84710c7967bb [ERR] Failed executing DbCommand ("32"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTimeOffset), @p5='?' (DbType = DateTime2), @p6='?' (Size = 450), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = Boolean), @p13='?' (DbType = Boolean), @p14='?' (DbType = DateTime2), @p15='?' (DbType = Int32), @p16='?' (Size = 4000), @p17='?' (DbType = DateTimeOffset), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (Size = 4000), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (Size = 4000), @p25='?' (Size = 4000), @p26='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [City], [Country], [CreatedBy], [CreatedDate], [DateAccountLocked], [Email], [EmailConfirmationDate], [FirstName], [IsActive], [IsDeleted], [IsEmailConfirmed], [IsLockedOut], [IsSuperAdmin], [LastLogin], [LockoutCounter], [ModifiedBy], [ModifiedDate], [MustChangePassword], [No], [Password], [PhoneNumber], [Road], [State], [SurName], [Telephone], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26);" (627a98df)
+2024-04-27T16:17:48.1025077+01:00 800000cf-0002-f900-b63f-84710c7967bb [ERR] An exception occurred in the database while saving changes for context type '"ErrandPayApp.Data.APPContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.AppUsers' with unique index 'IX_AppUsers_Email'. The duplicate key value is (ezekielpatrick962@gmail.com).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:505140f8-690f-4558-b83c-d8aa6510a44e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)" (170f029e)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.AppUsers' with unique index 'IX_AppUsers_Email'. The duplicate key value is (ezekielpatrick962@gmail.com).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:505140f8-690f-4558-b83c-d8aa6510a44e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at ErrandPayApp.Data.Repositories.UserRepository.CreateUser(AppUserDto userDto) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Data\Repositories\UserRepository.cs:line 85
+2024-04-27T16:17:48.6450557+01:00 800000cf-0002-f900-b63f-84710c7967bb [INF] Executing JsonResult, writing value of type '"ErrandPayApp.Core.Models.ResponseModel`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (2f513669)
+2024-04-27T16:17:48.6464049+01:00 800000cf-0002-f900-b63f-84710c7967bb [INF] Executed action "ErrandPayApp.API.Controllers.UserController.CreateUser (ErrandPayApp.API)" in 7455.1624ms (afa2e885)
+2024-04-27T16:17:48.6465255+01:00 800000cf-0002-f900-b63f-84710c7967bb [INF] Executed endpoint '"ErrandPayApp.API.Controllers.UserController.CreateUser (ErrandPayApp.API)"' (99874f2b)
+2024-04-27T16:17:48.6487422+01:00 800000cf-0002-f900-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44331/api/User application/json 319 - 500 - application/json 7536.7520ms (791a596a)
+2024-04-27T16:19:10.1282938+01:00 80000096-0007-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44331/api/User application/json 319 (ca22a1cb)
+2024-04-27T16:19:10.1290844+01:00 80000096-0007-fa00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2024-04-27T16:19:10.1426673+01:00 80000096-0007-fa00-b63f-84710c7967bb [INF] Executing endpoint '"ErrandPayApp.API.Controllers.UserController.CreateUser (ErrandPayApp.API)"' (500cc934)
+2024-04-27T16:19:10.1430076+01:00 80000096-0007-fa00-b63f-84710c7967bb [INF] Route matched with "{action = \"CreateUser\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(ErrandPayApp.API.RequestVms.UserVm)" on controller "ErrandPayApp.API.Controllers.UserController" ("ErrandPayApp.API"). (122b2fdf)
+2024-04-27T16:19:12.4460051+01:00 80000096-0007-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("56"ms) [Parameters=["@__email_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Email], [a].[PhoneNumber], [a].[SurName], [a].[FirstName], [a].[IsSuperAdmin], [a].[Id], [a].[MustChangePassword], [a].[LockoutCounter], [a].[IsLockedOut], [a].[LastLogin], [a].[DateAccountLocked], [a].[Title], [a].[No], [a].[Road], [a].[City], [a].[State], [a].[Country]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @__email_0" (0723d8ff)
+2024-04-27T16:19:34.5238167+01:00 80000096-0007-fa00-b63f-84710c7967bb [ERR] Failed executing DbCommand ("22"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTimeOffset), @p5='?' (DbType = DateTime2), @p6='?' (Size = 450), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = Boolean), @p13='?' (DbType = Boolean), @p14='?' (DbType = DateTime2), @p15='?' (DbType = Int32), @p16='?' (Size = 4000), @p17='?' (DbType = DateTimeOffset), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (Size = 4000), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (Size = 4000), @p25='?' (Size = 4000), @p26='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [City], [Country], [CreatedBy], [CreatedDate], [DateAccountLocked], [Email], [EmailConfirmationDate], [FirstName], [IsActive], [IsDeleted], [IsEmailConfirmed], [IsLockedOut], [IsSuperAdmin], [LastLogin], [LockoutCounter], [ModifiedBy], [ModifiedDate], [MustChangePassword], [No], [Password], [PhoneNumber], [Road], [State], [SurName], [Telephone], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26);" (627a98df)
+2024-04-27T16:19:34.5729340+01:00 80000096-0007-fa00-b63f-84710c7967bb [ERR] An exception occurred in the database while saving changes for context type '"ErrandPayApp.Data.APPContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.AppUsers' with unique index 'IX_AppUsers_Email'. The duplicate key value is (ezekielpatrick962@gmail.com).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:505140f8-690f-4558-b83c-d8aa6510a44e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)" (170f029e)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.AppUsers' with unique index 'IX_AppUsers_Email'. The duplicate key value is (ezekielpatrick962@gmail.com).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:505140f8-690f-4558-b83c-d8aa6510a44e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at ErrandPayApp.Data.Repositories.UserRepository.CreateUser(AppUserDto userDto) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Data\Repositories\UserRepository.cs:line 85
+2024-04-27T16:19:35.0633199+01:00 80000096-0007-fa00-b63f-84710c7967bb [INF] Executing JsonResult, writing value of type '"ErrandPayApp.Core.Models.ResponseModel`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (2f513669)
+2024-04-27T16:19:35.0639361+01:00 80000096-0007-fa00-b63f-84710c7967bb [INF] Executed action "ErrandPayApp.API.Controllers.UserController.CreateUser (ErrandPayApp.API)" in 24920.8715ms (afa2e885)
+2024-04-27T16:19:35.0640722+01:00 80000096-0007-fa00-b63f-84710c7967bb [INF] Executed endpoint '"ErrandPayApp.API.Controllers.UserController.CreateUser (ErrandPayApp.API)"' (99874f2b)
+2024-04-27T16:19:35.0649668+01:00 80000096-0007-fa00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44331/api/User application/json 319 - 500 - application/json 24936.7738ms (791a596a)
+2024-04-27T16:19:45.3521329+01:00 8000005f-0006-f900-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44331/api/User application/json 319 (ca22a1cb)
+2024-04-27T16:19:45.3524490+01:00 8000005f-0006-f900-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2024-04-27T16:19:45.3526463+01:00 8000005f-0006-f900-b63f-84710c7967bb [INF] Executing endpoint '"ErrandPayApp.API.Controllers.UserController.CreateUser (ErrandPayApp.API)"' (500cc934)
+2024-04-27T16:19:45.3527791+01:00 8000005f-0006-f900-b63f-84710c7967bb [INF] Route matched with "{action = \"CreateUser\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(ErrandPayApp.API.RequestVms.UserVm)" on controller "ErrandPayApp.API.Controllers.UserController" ("ErrandPayApp.API"). (122b2fdf)

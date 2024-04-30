@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "q8g4wHwK3peAzmnfuGKnGTQXmBmWArmL/AwMpYIKZiQ=",
+  "Source": "ErrandPayApp.API",
+  "BasePath": "_content/ErrandPayApp.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

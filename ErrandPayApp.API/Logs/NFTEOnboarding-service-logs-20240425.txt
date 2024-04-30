@@ -1,0 +1,1044 @@
+2024-04-25T22:23:17.9153435+01:00  [INF] Entity Framework Core "5.0.6" initialized '"APPContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2024-04-25T22:23:35.1280752+01:00  [INF] User profile is available. Using '"C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2024-04-25T22:23:35.1839735+01:00  [ERR] Message => A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)|Stacktrace =>    at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext c, TState s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.DbMigration(IHost host) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 36|InnerException =>  (b4fedd65)
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext c, TState s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.DbMigration(IHost host) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 36
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+2024-04-25T22:23:35.4750928+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-04-25T22:23:35.4777128+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-04-25T22:23:35.4804940+01:00  [INF] Content root path: "C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.API" (b5d60022)
+2024-04-25T22:23:35.5409231+01:00 80000008-0004-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T22:23:35.9639222+01:00 80000008-0004-fb00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 424.2260ms (791a596a)
+2024-04-25T22:24:43.7962954+01:00  [INF] Entity Framework Core "5.0.6" initialized '"APPContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2024-04-25T22:25:00.6285679+01:00  [INF] User profile is available. Using '"C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2024-04-25T22:25:00.6710874+01:00  [ERR] Message => A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)|Stacktrace =>    at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext c, TState s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.DbMigration(IHost host) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 36|InnerException =>  (b4fedd65)
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext c, TState s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.DbMigration(IHost host) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 36
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+2024-04-25T22:25:00.9565738+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-04-25T22:25:00.9656900+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-04-25T22:25:00.9733077+01:00  [INF] Content root path: "C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.API" (b5d60022)
+2024-04-25T22:25:01.0246488+01:00 80000057-0006-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T22:25:01.4377565+01:00 80000057-0006-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 416.3575ms (791a596a)
+2024-04-25T22:25:15.6517413+01:00 80000033-0007-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T22:25:15.6761814+01:00 80000033-0007-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 23.0292ms (791a596a)
+2024-04-25T22:25:16.5773997+01:00 8000007a-0005-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T22:25:16.5874529+01:00 8000007a-0005-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 9.7290ms (791a596a)
+2024-04-25T22:25:17.2434789+01:00 80000035-0007-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T22:25:17.2477556+01:00 80000035-0007-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 4.5566ms (791a596a)
+2024-04-25T22:25:18.4588098+01:00 80000059-0006-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T22:25:18.4630721+01:00 80000059-0006-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 4.1663ms (791a596a)
+2024-04-25T22:27:24.3360600+01:00  [INF] Entity Framework Core "5.0.6" initialized '"APPContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2024-04-25T22:27:41.1193653+01:00  [INF] User profile is available. Using '"C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2024-04-25T22:27:41.1818259+01:00  [ERR] Message => A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)|Stacktrace =>    at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext c, TState s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.DbMigration(IHost host) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 36|InnerException =>  (b4fedd65)
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext c, TState s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.DbMigration(IHost host) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 36
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+2024-04-25T22:27:41.4338490+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-04-25T22:27:41.4366295+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-04-25T22:27:41.4462307+01:00  [INF] Content root path: "C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.API" (b5d60022)
+2024-04-25T22:27:41.4931611+01:00 8000005b-0004-f900-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T22:27:41.8292154+01:00 8000005b-0004-f900-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 338.6366ms (791a596a)
+2024-04-25T22:31:02.5595794+01:00  [INF] Entity Framework Core "5.0.6" initialized '"APPContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2024-04-25T22:31:19.3119343+01:00  [INF] User profile is available. Using '"C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2024-04-25T22:31:19.3501193+01:00  [ERR] Message => A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)|Stacktrace =>    at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext c, TState s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.DbMigration(IHost host) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 36|InnerException =>  (b4fedd65)
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext c, TState s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.DbMigration(IHost host) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 36
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+2024-04-25T22:31:19.5781564+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-04-25T22:31:19.5806509+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-04-25T22:31:19.5857457+01:00  [INF] Content root path: "C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.API" (b5d60022)
+2024-04-25T22:31:19.6445200+01:00 80000006-0006-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T22:31:20.0520767+01:00 80000006-0006-fa00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 408.1489ms (791a596a)
+2024-04-25T22:33:12.2559427+01:00  [INF] Entity Framework Core "5.0.6" initialized '"APPContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2024-04-25T22:33:30.5227182+01:00  [INF] User profile is available. Using '"C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2024-04-25T22:33:30.5744905+01:00  [ERR] Message => A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)|Stacktrace =>    at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext c, TState s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.DbMigration(IHost host) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 36|InnerException =>  (b4fedd65)
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext c, TState s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.DbMigration(IHost host) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 36
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+2024-04-25T22:33:30.8749059+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-04-25T22:33:30.8778776+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-04-25T22:33:30.8929933+01:00  [INF] Content root path: "C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.API" (b5d60022)
+2024-04-25T22:33:30.9458801+01:00 8000007d-0005-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T22:33:32.5724298+01:00 8000007d-0005-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 1629.5047ms (791a596a)
+2024-04-25T22:35:48.8466794+01:00  [INF] User profile is available. Using '"C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2024-04-25T22:35:49.2440514+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-04-25T22:35:49.2472262+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-04-25T22:35:49.2497762+01:00  [INF] Content root path: "C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.API" (b5d60022)
+2024-04-25T22:35:49.2870257+01:00 8000007f-0005-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T22:35:49.7057643+01:00 8000007f-0005-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 423.5629ms (791a596a)
+2024-04-25T22:35:52.5606194+01:00 8000000d-0006-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T22:35:52.5835072+01:00 8000000d-0006-fb00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 23.0056ms (791a596a)
+2024-04-25T22:35:53.2430831+01:00 80000058-0000-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T22:35:53.2502689+01:00 80000058-0000-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 7.1494ms (791a596a)
+2024-04-25T22:36:14.8770381+01:00  [INF] User profile is available. Using '"C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2024-04-25T22:36:15.3129430+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-04-25T22:36:15.3163110+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-04-25T22:36:15.3205186+01:00  [INF] Content root path: "C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.API" (b5d60022)
+2024-04-25T22:36:15.3567552+01:00 80000009-0007-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T22:36:15.8440775+01:00 80000009-0007-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 493.5338ms (791a596a)
+2024-04-25T23:19:56.7996088+01:00  [INF] User profile is available. Using '"C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2024-04-25T23:19:57.4530981+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-04-25T23:19:57.4582726+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-04-25T23:19:57.4982560+01:00  [INF] Content root path: "C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.API" (b5d60022)
+2024-04-25T23:19:57.5342714+01:00 8000000a-0002-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T23:19:59.3363536+01:00 8000000a-0002-fb00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 1803.6397ms (791a596a)
+2024-04-25T23:21:21.2939557+01:00  [INF] Entity Framework Core "5.0.6" initialized '"APPContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2024-04-25T23:21:49.9315079+01:00  [INF] User profile is available. Using '"C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2024-04-25T23:21:50.4113562+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-04-25T23:21:50.4143762+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-04-25T23:21:50.4171158+01:00  [INF] Content root path: "C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.API" (b5d60022)
+2024-04-25T23:21:50.4560863+01:00 80000023-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T23:21:50.9046784+01:00 80000023-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 452.9967ms (791a596a)
+2024-04-25T23:22:16.4663675+01:00  [INF] Entity Framework Core "5.0.6" initialized '"APPContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2024-04-25T23:22:34.5379385+01:00  [INF] User profile is available. Using '"C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2024-04-25T23:22:34.6496940+01:00  [ERR] Message => A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)|Stacktrace =>    at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext c, TState s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.DbMigration(IHost host) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 36|InnerException =>  (b4fedd65)
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext c, TState s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.DbMigration(IHost host) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 36
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+2024-04-25T23:22:34.9630747+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-04-25T23:22:34.9661868+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-04-25T23:22:34.9694633+01:00  [INF] Content root path: "C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.API" (b5d60022)
+2024-04-25T23:22:35.0468662+01:00 80000008-0006-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T23:22:35.5079438+01:00 80000008-0006-fa00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 466.4836ms (791a596a)
+2024-04-25T23:23:54.9737951+01:00  [INF] Entity Framework Core "5.0.6" initialized '"APPContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2024-04-25T23:23:55.8529068+01:00  [INF] Executed DbCommand ("345"ms) [Parameters=[""], CommandType='Text', CommandTimeout='60']"
+""CREATE DATABASE [E-TicketingDb];" (0723d8ff)
+2024-04-25T23:23:56.0653051+01:00  [INF] Executed DbCommand ("210"ms) [Parameters=[""], CommandType='Text', CommandTimeout='60']"
+""IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [E-TicketingDb] SET READ_COMMITTED_SNAPSHOT ON;
+END;" (0723d8ff)
+2024-04-25T23:23:56.0905975+01:00  [INF] Executed DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-04-25T23:23:56.2233748+01:00  [INF] Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);" (0723d8ff)
+2024-04-25T23:23:56.2250374+01:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-04-25T23:23:56.2470845+01:00  [INF] Executed DbCommand ("18"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-04-25T23:23:56.2675272+01:00  [INF] Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-04-25T23:23:56.2899658+01:00  [INF] Applying migration '"20240425222121_initial miraton"'. (0e2ac64d)
+2024-04-25T23:23:56.3657798+01:00  [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [AppUsers] (
+    [Id] nvarchar(450) NOT NULL,
+    [Title] nvarchar(max) NULL,
+    [FirstName] nvarchar(max) NULL,
+    [SurName] nvarchar(max) NULL,
+    [No] nvarchar(max) NULL,
+    [Road] nvarchar(max) NULL,
+    [City] nvarchar(max) NULL,
+    [State] nvarchar(max) NULL,
+    [Country] nvarchar(max) NULL,
+    [Telephone] nvarchar(max) NULL,
+    [Email] nvarchar(450) NULL,
+    [ConfirmEmail] nvarchar(max) NULL,
+    [Password] nvarchar(max) NULL,
+    [ConfirmPassword] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [IsEmailConfirmed] bit NOT NULL,
+    [EmailConfirmationDate] datetimeoffset NULL,
+    [IsSuperAdmin] bit NOT NULL,
+    [LockoutCounter] int NOT NULL,
+    [IsLockedOut] bit NOT NULL,
+    [DateAccountLocked] datetime2 NOT NULL,
+    [MustChangePassword] bit NOT NULL,
+    [LastLogin] datetime2 NULL,
+    [IsActive] bit NOT NULL,
+    [CreatedDate] datetimeoffset NOT NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [ModifiedDate] datetimeoffset NULL,
+    [ModifiedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    CONSTRAINT [PK_AppUsers] PRIMARY KEY ([Id])
+);" (0723d8ff)
+2024-04-25T23:23:56.3693155+01:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [LoginAttemptLogs] (
+    [Id] bigint NOT NULL IDENTITY,
+    [Email] nvarchar(max) NULL,
+    [IsActive] bit NOT NULL,
+    [CreatedDate] datetimeoffset NOT NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [ModifiedDate] datetimeoffset NULL,
+    [ModifiedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    CONSTRAINT [PK_LoginAttemptLogs] PRIMARY KEY ([Id])
+);" (0723d8ff)
+2024-04-25T23:23:56.3720341+01:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [PasswordHistories] (
+    [Id] bigint NOT NULL IDENTITY,
+    [UserId] nvarchar(max) NULL,
+    [Password] nvarchar(max) NULL,
+    [Email] nvarchar(max) NULL,
+    [IsCurrentPassword] bit NOT NULL,
+    [IsActive] bit NOT NULL,
+    [CreatedDate] datetimeoffset NOT NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [ModifiedDate] datetimeoffset NULL,
+    [ModifiedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    CONSTRAINT [PK_PasswordHistories] PRIMARY KEY ([Id])
+);" (0723d8ff)
+2024-04-25T23:23:56.3749580+01:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Permissions] (
+    [Id] bigint NOT NULL IDENTITY,
+    [PermissionName] nvarchar(450) NULL,
+    [PermissionDisplayName] nvarchar(max) NULL,
+    [PermissionDescription] nvarchar(max) NULL,
+    [IsActive] bit NOT NULL,
+    [CreatedDate] datetimeoffset NOT NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [ModifiedDate] datetimeoffset NULL,
+    [ModifiedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    CONSTRAINT [PK_Permissions] PRIMARY KEY ([Id])
+);" (0723d8ff)
+2024-04-25T23:23:56.3779522+01:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Roles] (
+    [Id] bigint NOT NULL IDENTITY,
+    [RoleNameHash] nvarchar(450) NULL,
+    [RoleName] nvarchar(450) NULL,
+    [RoleDescription] nvarchar(max) NULL,
+    [IsActive] bit NOT NULL,
+    [CreatedDate] datetimeoffset NOT NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [ModifiedDate] datetimeoffset NULL,
+    [ModifiedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    CONSTRAINT [PK_Roles] PRIMARY KEY ([Id])
+);" (0723d8ff)
+2024-04-25T23:23:56.3826626+01:00  [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [RolePermissions] (
+    [Id] bigint NOT NULL IDENTITY,
+    [RoleId] bigint NOT NULL,
+    [PermissionId] bigint NOT NULL,
+    [CanAdd] bit NOT NULL,
+    [CanEdit] bit NOT NULL,
+    [CanDelete] bit NOT NULL,
+    [CanRead] bit NOT NULL,
+    [CanApprove] bit NOT NULL,
+    [CanTerminate] bit NOT NULL,
+    [IsActive] bit NOT NULL,
+    [CreatedDate] datetimeoffset NOT NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [ModifiedDate] datetimeoffset NULL,
+    [ModifiedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    CONSTRAINT [PK_RolePermissions] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RolePermissions_Permissions_PermissionId] FOREIGN KEY ([PermissionId]) REFERENCES [Permissions] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_RolePermissions_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE
+);" (0723d8ff)
+2024-04-25T23:23:56.3884565+01:00  [INF] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [UserRoles] (
+    [Id] bigint NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NULL,
+    [RoleId] bigint NOT NULL,
+    [IsActive] bit NOT NULL,
+    [CreatedDate] datetimeoffset NOT NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [ModifiedDate] datetimeoffset NULL,
+    [ModifiedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    CONSTRAINT [PK_UserRoles] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_UserRoles_AppUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AppUsers] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_UserRoles_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE
+);" (0723d8ff)
+2024-04-25T23:23:56.3943622+01:00  [INF] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE UNIQUE INDEX [IX_AppUsers_Email] ON [AppUsers] ([Email]) WHERE [Email] IS NOT NULL;" (0723d8ff)
+2024-04-25T23:23:56.3958582+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE UNIQUE INDEX [IX_Permissions_PermissionName] ON [Permissions] ([PermissionName]) WHERE [PermissionName] IS NOT NULL;" (0723d8ff)
+2024-04-25T23:23:56.3976321+01:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_RolePermissions_PermissionId] ON [RolePermissions] ([PermissionId]);" (0723d8ff)
+2024-04-25T23:23:56.3992129+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE UNIQUE INDEX [IX_RolePermissions_RoleId_PermissionId] ON [RolePermissions] ([RoleId], [PermissionId]);" (0723d8ff)
+2024-04-25T23:23:56.4007305+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE UNIQUE INDEX [IX_Roles_RoleName] ON [Roles] ([RoleName]) WHERE [RoleName] IS NOT NULL;" (0723d8ff)
+2024-04-25T23:23:56.4022488+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE UNIQUE INDEX [IX_Roles_RoleNameHash] ON [Roles] ([RoleNameHash]) WHERE [RoleNameHash] IS NOT NULL;" (0723d8ff)
+2024-04-25T23:23:56.4032210+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE UNIQUE INDEX [IX_UserRoles_RoleId_UserId] ON [UserRoles] ([RoleId], [UserId]) WHERE [UserId] IS NOT NULL;" (0723d8ff)
+2024-04-25T23:23:56.4042314+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_UserRoles_UserId] ON [UserRoles] ([UserId]);" (0723d8ff)
+2024-04-25T23:23:56.4114088+01:00  [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240425222121_initial miraton', N'5.0.6');" (0723d8ff)
+2024-04-25T23:25:01.7922845+01:00  [INF] Entity Framework Core "5.0.6" initialized '"APPContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2024-04-25T23:25:02.4758393+01:00  [INF] Executed DbCommand ("31"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-04-25T23:25:02.5222868+01:00  [INF] Executed DbCommand ("27"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-04-25T23:25:02.5295865+01:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-04-25T23:25:02.5312844+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-04-25T23:25:02.5590081+01:00  [INF] Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-04-25T23:25:02.5847914+01:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2024-04-25T23:25:02.9444414+01:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PermissionName]
+FROM [Permissions] AS [p]" (0723d8ff)
+2024-04-25T23:25:03.3612466+01:00  [INF] Executed DbCommand ("106"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = DateTimeOffset), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 450), @p9='?' (Size = 4000), @p10='?' (DbType = DateTimeOffset), @p11='?' (DbType = Boolean), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = DateTimeOffset), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (Size = 450), @p18='?' (Size = 4000), @p19='?' (DbType = DateTimeOffset), @p20='?' (DbType = Boolean), @p21='?' (DbType = Boolean), @p22='?' (Size = 4000), @p23='?' (DbType = DateTimeOffset), @p24='?' (Size = 4000), @p25='?' (Size = 4000), @p26='?' (Size = 450), @p27='?' (Size = 4000), @p28='?' (DbType = DateTimeOffset), @p29='?' (DbType = Boolean), @p30='?' (DbType = Boolean), @p31='?' (Size = 4000), @p32='?' (DbType = DateTimeOffset), @p33='?' (Size = 4000), @p34='?' (Size = 4000), @p35='?' (Size = 450), @p36='?' (Size = 4000), @p37='?' (DbType = DateTimeOffset), @p38='?' (DbType = Boolean), @p39='?' (DbType = Boolean), @p40='?' (Size = 4000), @p41='?' (DbType = DateTimeOffset), @p42='?' (Size = 4000), @p43='?' (Size = 4000), @p44='?' (Size = 450), @p45='?' (Size = 4000), @p46='?' (DbType = DateTimeOffset), @p47='?' (DbType = Boolean), @p48='?' (DbType = Boolean), @p49='?' (Size = 4000), @p50='?' (DbType = DateTimeOffset), @p51='?' (Size = 4000), @p52='?' (Size = 4000), @p53='?' (Size = 450), @p54='?' (Size = 4000), @p55='?' (DbType = DateTimeOffset), @p56='?' (DbType = Boolean), @p57='?' (DbType = Boolean), @p58='?' (Size = 4000), @p59='?' (DbType = DateTimeOffset), @p60='?' (Size = 4000), @p61='?' (Size = 4000), @p62='?' (Size = 450), @p63='?' (Size = 4000), @p64='?' (DbType = DateTimeOffset), @p65='?' (DbType = Boolean), @p66='?' (DbType = Boolean), @p67='?' (Size = 4000), @p68='?' (DbType = DateTimeOffset), @p69='?' (Size = 4000), @p70='?' (Size = 4000), @p71='?' (Size = 450), @p72='?' (Size = 4000), @p73='?' (DbType = DateTimeOffset), @p74='?' (DbType = Boolean), @p75='?' (DbType = Boolean), @p76='?' (Size = 4000), @p77='?' (DbType = DateTimeOffset), @p78='?' (Size = 4000), @p79='?' (Size = 4000), @p80='?' (Size = 450), @p81='?' (Size = 4000), @p82='?' (DbType = DateTimeOffset), @p83='?' (DbType = Boolean), @p84='?' (DbType = Boolean), @p85='?' (Size = 4000), @p86='?' (DbType = DateTimeOffset), @p87='?' (Size = 4000), @p88='?' (Size = 4000), @p89='?' (Size = 450), @p90='?' (Size = 4000), @p91='?' (DbType = DateTimeOffset), @p92='?' (DbType = Boolean), @p93='?' (DbType = Boolean), @p94='?' (Size = 4000), @p95='?' (DbType = DateTimeOffset), @p96='?' (Size = 4000), @p97='?' (Size = 4000), @p98='?' (Size = 450), @p99='?' (Size = 4000), @p100='?' (DbType = DateTimeOffset), @p101='?' (DbType = Boolean), @p102='?' (DbType = Boolean), @p103='?' (Size = 4000), @p104='?' (DbType = DateTimeOffset), @p105='?' (Size = 4000), @p106='?' (Size = 4000), @p107='?' (Size = 450), @p108='?' (Size = 4000), @p109='?' (DbType = DateTimeOffset), @p110='?' (DbType = Boolean), @p111='?' (DbType = Boolean), @p112='?' (Size = 4000), @p113='?' (DbType = DateTimeOffset), @p114='?' (Size = 4000), @p115='?' (Size = 4000), @p116='?' (Size = 450), @p117='?' (Size = 4000), @p118='?' (DbType = DateTimeOffset), @p119='?' (DbType = Boolean), @p120='?' (DbType = Boolean), @p121='?' (Size = 4000), @p122='?' (DbType = DateTimeOffset), @p123='?' (Size = 4000), @p124='?' (Size = 4000), @p125='?' (Size = 450), @p126='?' (Size = 4000), @p127='?' (DbType = DateTimeOffset), @p128='?' (DbType = Boolean), @p129='?' (DbType = Boolean), @p130='?' (Size = 4000), @p131='?' (DbType = DateTimeOffset), @p132='?' (Size = 4000), @p133='?' (Size = 4000), @p134='?' (Size = 450), @p135='?' (Size = 4000), @p136='?' (DbType = DateTimeOffset), @p137='?' (DbType = Boolean), @p138='?' (DbType = Boolean), @p139='?' (Size = 4000), @p140='?' (DbType = DateTimeOffset), @p141='?' (Size = 4000), @p142='?' (Size = 4000), @p143='?' (Size = 450), @p144='?' (Size = 4000), @p145='?' (DbType = DateTimeOffset), @p146='?' (DbType = Boolean), @p147='?' (DbType = Boolean), @p148='?' (Size = 4000), @p149='?' (DbType = DateTimeOffset), @p150='?' (Size = 4000), @p151='?' (Size = 4000), @p152='?' (Size = 450), @p153='?' (Size = 4000), @p154='?' (DbType = DateTimeOffset), @p155='?' (DbType = Boolean), @p156='?' (DbType = Boolean), @p157='?' (Size = 4000), @p158='?' (DbType = DateTimeOffset), @p159='?' (Size = 4000), @p160='?' (Size = 4000), @p161='?' (Size = 450), @p162='?' (Size = 4000), @p163='?' (DbType = DateTimeOffset), @p164='?' (DbType = Boolean), @p165='?' (DbType = Boolean), @p166='?' (Size = 4000), @p167='?' (DbType = DateTimeOffset), @p168='?' (Size = 4000), @p169='?' (Size = 4000), @p170='?' (Size = 450), @p171='?' (Size = 4000), @p172='?' (DbType = DateTimeOffset), @p173='?' (DbType = Boolean), @p174='?' (DbType = Boolean), @p175='?' (Size = 4000), @p176='?' (DbType = DateTimeOffset), @p177='?' (Size = 4000), @p178='?' (Size = 4000), @p179='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DECLARE @inserted0 TABLE ([Id] bigint, [_Position] [int]);
+MERGE [Permissions] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, 0),
+(@p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, 1),
+(@p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, 2),
+(@p27, @p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35, 3),
+(@p36, @p37, @p38, @p39, @p40, @p41, @p42, @p43, @p44, 4),
+(@p45, @p46, @p47, @p48, @p49, @p50, @p51, @p52, @p53, 5),
+(@p54, @p55, @p56, @p57, @p58, @p59, @p60, @p61, @p62, 6),
+(@p63, @p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71, 7),
+(@p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79, @p80, 8),
+(@p81, @p82, @p83, @p84, @p85, @p86, @p87, @p88, @p89, 9),
+(@p90, @p91, @p92, @p93, @p94, @p95, @p96, @p97, @p98, 10),
+(@p99, @p100, @p101, @p102, @p103, @p104, @p105, @p106, @p107, 11),
+(@p108, @p109, @p110, @p111, @p112, @p113, @p114, @p115, @p116, 12),
+(@p117, @p118, @p119, @p120, @p121, @p122, @p123, @p124, @p125, 13),
+(@p126, @p127, @p128, @p129, @p130, @p131, @p132, @p133, @p134, 14),
+(@p135, @p136, @p137, @p138, @p139, @p140, @p141, @p142, @p143, 15),
+(@p144, @p145, @p146, @p147, @p148, @p149, @p150, @p151, @p152, 16),
+(@p153, @p154, @p155, @p156, @p157, @p158, @p159, @p160, @p161, 17),
+(@p162, @p163, @p164, @p165, @p166, @p167, @p168, @p169, @p170, 18),
+(@p171, @p172, @p173, @p174, @p175, @p176, @p177, @p178, @p179, 19)) AS i ([CreatedBy], [CreatedDate], [IsActive], [IsDeleted], [ModifiedBy], [ModifiedDate], [PermissionDescription], [PermissionDisplayName], [PermissionName], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([CreatedBy], [CreatedDate], [IsActive], [IsDeleted], [ModifiedBy], [ModifiedDate], [PermissionDescription], [PermissionDisplayName], [PermissionName])
+VALUES (i.[CreatedBy], i.[CreatedDate], i.[IsActive], i.[IsDeleted], i.[ModifiedBy], i.[ModifiedDate], i.[PermissionDescription], i.[PermissionDisplayName], i.[PermissionName])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted0;
+
+SELECT [t].[Id] FROM [Permissions] t
+INNER JOIN @inserted0 i ON ([t].[Id] = [i].[Id])
+ORDER BY [i].[_Position];" (0723d8ff)
+2024-04-25T23:25:03.5230352+01:00  [INF] Executed DbCommand ("27"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[City], [a].[ConfirmEmail], [a].[ConfirmPassword], [a].[Country], [a].[CreatedBy], [a].[CreatedDate], [a].[DateAccountLocked], [a].[Email], [a].[EmailConfirmationDate], [a].[FirstName], [a].[IsActive], [a].[IsDeleted], [a].[IsEmailConfirmed], [a].[IsLockedOut], [a].[IsSuperAdmin], [a].[LastLogin], [a].[LockoutCounter], [a].[ModifiedBy], [a].[ModifiedDate], [a].[MustChangePassword], [a].[No], [a].[Password], [a].[PhoneNumber], [a].[Road], [a].[State], [a].[SurName], [a].[Telephone], [a].[Title]
+FROM [AppUsers] AS [a]
+WHERE [a].[IsSuperAdmin] = CAST(1 AS bit)" (0723d8ff)
+2024-04-25T23:25:03.7850703+01:00  [INF] User profile is available. Using '"C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2024-04-25T23:25:03.8535127+01:00  [ERR] Message => One or more errors occurred. (Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.)|Stacktrace =>    at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.InitializeSupperUser(IServiceScope scope) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 87|InnerException => System.InvalidOperationException: Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at ErrandPayApp.Data.Repositories.UserRepository.CreateDefaultUser() in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Data\Repositories\UserRepository.cs:line 307 (2a14ea4d)
+System.AggregateException: One or more errors occurred. (Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.)
+ ---> System.InvalidOperationException: Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at ErrandPayApp.Data.Repositories.UserRepository.CreateDefaultUser() in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Data\Repositories\UserRepository.cs:line 307
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.InitializeSupperUser(IServiceScope scope) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 87
+2024-04-25T23:25:04.1297536+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-04-25T23:25:04.1335423+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-04-25T23:25:04.1366015+01:00  [INF] Content root path: "C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.API" (b5d60022)
+2024-04-25T23:25:04.1950669+01:00 80000084-0005-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T23:25:04.6367223+01:00 80000084-0005-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 443.6772ms (791a596a)
+2024-04-25T23:29:12.9086236+01:00  [INF] Entity Framework Core "5.0.6" initialized '"APPContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2024-04-25T23:29:14.4767445+01:00  [INF] Executed DbCommand ("33"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-04-25T23:29:14.5155339+01:00  [INF] Executed DbCommand ("21"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-04-25T23:29:14.5206062+01:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-04-25T23:29:14.5218825+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-04-25T23:29:14.5405599+01:00  [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-04-25T23:29:14.5640546+01:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2024-04-25T23:29:14.9124446+01:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PermissionName]
+FROM [Permissions] AS [p]" (0723d8ff)
+2024-04-25T23:29:15.0686829+01:00  [INF] Executed DbCommand ("27"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[City], [a].[ConfirmEmail], [a].[ConfirmPassword], [a].[Country], [a].[CreatedBy], [a].[CreatedDate], [a].[DateAccountLocked], [a].[Email], [a].[EmailConfirmationDate], [a].[FirstName], [a].[IsActive], [a].[IsDeleted], [a].[IsEmailConfirmed], [a].[IsLockedOut], [a].[IsSuperAdmin], [a].[LastLogin], [a].[LockoutCounter], [a].[ModifiedBy], [a].[ModifiedDate], [a].[MustChangePassword], [a].[No], [a].[Password], [a].[PhoneNumber], [a].[Road], [a].[State], [a].[SurName], [a].[Telephone], [a].[Title]
+FROM [AppUsers] AS [a]
+WHERE [a].[IsSuperAdmin] = CAST(1 AS bit)" (0723d8ff)
+2024-04-25T23:29:15.3336431+01:00  [INF] User profile is available. Using '"C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2024-04-25T23:29:15.3920129+01:00  [ERR] Message => One or more errors occurred. (Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.)|Stacktrace =>    at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.InitializeSupperUser(IServiceScope scope) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 87|InnerException => System.InvalidOperationException: Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at ErrandPayApp.Data.Repositories.UserRepository.CreateDefaultUser() in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Data\Repositories\UserRepository.cs:line 307 (2a14ea4d)
+System.AggregateException: One or more errors occurred. (Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.)
+ ---> System.InvalidOperationException: Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at ErrandPayApp.Data.Repositories.UserRepository.CreateDefaultUser() in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Data\Repositories\UserRepository.cs:line 307
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.InitializeSupperUser(IServiceScope scope) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 87
+2024-04-25T23:29:15.7128757+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-04-25T23:29:15.7159146+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-04-25T23:29:15.7232930+01:00  [INF] Content root path: "C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.API" (b5d60022)
+2024-04-25T23:29:15.7809017+01:00 80000026-0006-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T23:29:17.5679903+01:00 80000026-0006-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 1790.1336ms (791a596a)
+2024-04-25T23:33:27.0763279+01:00  [INF] Entity Framework Core "5.0.6" initialized '"APPContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2024-04-25T23:33:27.7909832+01:00  [INF] Executed DbCommand ("33"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-04-25T23:33:27.8833433+01:00  [INF] Executed DbCommand ("80"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-04-25T23:33:27.8906482+01:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-04-25T23:33:27.8914963+01:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-04-25T23:33:28.0269568+01:00  [INF] Executed DbCommand ("108"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-04-25T23:33:28.0650495+01:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2024-04-25T23:33:28.4519038+01:00  [INF] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PermissionName]
+FROM [Permissions] AS [p]" (0723d8ff)
+2024-04-25T23:33:28.5828529+01:00  [INF] Executed DbCommand ("31"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[City], [a].[ConfirmEmail], [a].[ConfirmPassword], [a].[Country], [a].[CreatedBy], [a].[CreatedDate], [a].[DateAccountLocked], [a].[Email], [a].[EmailConfirmationDate], [a].[FirstName], [a].[IsActive], [a].[IsDeleted], [a].[IsEmailConfirmed], [a].[IsLockedOut], [a].[IsSuperAdmin], [a].[LastLogin], [a].[LockoutCounter], [a].[ModifiedBy], [a].[ModifiedDate], [a].[MustChangePassword], [a].[No], [a].[Password], [a].[PhoneNumber], [a].[Road], [a].[State], [a].[SurName], [a].[Telephone], [a].[Title]
+FROM [AppUsers] AS [a]
+WHERE [a].[IsSuperAdmin] = CAST(1 AS bit)" (0723d8ff)
+2024-04-25T23:33:28.9828108+01:00  [INF] User profile is available. Using '"C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2024-04-25T23:33:29.0400585+01:00  [ERR] Message => One or more errors occurred. (Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.)|Stacktrace =>    at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.InitializeSupperUser(IServiceScope scope) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 87|InnerException => System.InvalidOperationException: Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at ErrandPayApp.Data.Repositories.UserRepository.CreateDefaultUser() in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Data\Repositories\UserRepository.cs:line 307 (2a14ea4d)
+System.AggregateException: One or more errors occurred. (Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.)
+ ---> System.InvalidOperationException: Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at ErrandPayApp.Data.Repositories.UserRepository.CreateDefaultUser() in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Data\Repositories\UserRepository.cs:line 307
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.InitializeSupperUser(IServiceScope scope) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 87
+2024-04-25T23:33:29.4331225+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-04-25T23:33:29.4368766+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-04-25T23:33:29.4438107+01:00  [INF] Content root path: "C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.API" (b5d60022)
+2024-04-25T23:33:29.5220812+01:00 80000032-0005-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T23:37:18.8730405+01:00  [INF] Entity Framework Core "5.0.6" initialized '"APPContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2024-04-25T23:37:19.4729898+01:00  [INF] Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-04-25T23:37:19.5124667+01:00  [INF] Executed DbCommand ("23"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-04-25T23:37:19.5162183+01:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-04-25T23:37:19.5168971+01:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-04-25T23:37:19.5377040+01:00  [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-04-25T23:37:19.5588199+01:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2024-04-25T23:37:19.8570681+01:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PermissionName]
+FROM [Permissions] AS [p]" (0723d8ff)
+2024-04-25T23:37:19.9827948+01:00  [INF] Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[City], [a].[ConfirmEmail], [a].[ConfirmPassword], [a].[Country], [a].[CreatedBy], [a].[CreatedDate], [a].[DateAccountLocked], [a].[Email], [a].[EmailConfirmationDate], [a].[FirstName], [a].[IsActive], [a].[IsDeleted], [a].[IsEmailConfirmed], [a].[IsLockedOut], [a].[IsSuperAdmin], [a].[LastLogin], [a].[LockoutCounter], [a].[ModifiedBy], [a].[ModifiedDate], [a].[MustChangePassword], [a].[No], [a].[Password], [a].[PhoneNumber], [a].[Road], [a].[State], [a].[SurName], [a].[Telephone], [a].[Title]
+FROM [AppUsers] AS [a]
+WHERE [a].[IsSuperAdmin] = CAST(1 AS bit)" (0723d8ff)
+2024-04-25T23:37:20.2377581+01:00  [INF] User profile is available. Using '"C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2024-04-25T23:37:20.2749941+01:00  [ERR] Message => One or more errors occurred. (Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.)|Stacktrace =>    at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.InitializeSupperUser(IServiceScope scope) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 87|InnerException => System.InvalidOperationException: Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at ErrandPayApp.Data.Repositories.UserRepository.CreateDefaultUser() in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Data\Repositories\UserRepository.cs:line 307 (2a14ea4d)
+System.AggregateException: One or more errors occurred. (Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.)
+ ---> System.InvalidOperationException: Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at ErrandPayApp.Data.Repositories.UserRepository.CreateDefaultUser() in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Data\Repositories\UserRepository.cs:line 307
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.InitializeSupperUser(IServiceScope scope) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 87
+2024-04-25T23:37:20.5451999+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-04-25T23:37:20.5500517+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-04-25T23:37:20.5612288+01:00  [INF] Content root path: "C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.API" (b5d60022)
+2024-04-25T23:37:20.6311824+01:00 80000010-0007-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T23:41:43.9941847+01:00  [INF] Entity Framework Core "5.0.6" initialized '"APPContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2024-04-25T23:41:44.6137982+01:00  [INF] Executed DbCommand ("33"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-04-25T23:41:44.6753221+01:00  [INF] Executed DbCommand ("35"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-04-25T23:41:44.6802281+01:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-04-25T23:41:44.6813082+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-04-25T23:41:44.7084031+01:00  [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-04-25T23:41:44.7328914+01:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2024-04-25T23:41:45.0888975+01:00  [INF] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PermissionName]
+FROM [Permissions] AS [p]" (0723d8ff)
+2024-04-25T23:41:45.2212839+01:00  [INF] Executed DbCommand ("25"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[City], [a].[ConfirmEmail], [a].[ConfirmPassword], [a].[Country], [a].[CreatedBy], [a].[CreatedDate], [a].[DateAccountLocked], [a].[Email], [a].[EmailConfirmationDate], [a].[FirstName], [a].[IsActive], [a].[IsDeleted], [a].[IsEmailConfirmed], [a].[IsLockedOut], [a].[IsSuperAdmin], [a].[LastLogin], [a].[LockoutCounter], [a].[ModifiedBy], [a].[ModifiedDate], [a].[MustChangePassword], [a].[No], [a].[Password], [a].[PhoneNumber], [a].[Road], [a].[State], [a].[SurName], [a].[Telephone], [a].[Title]
+FROM [AppUsers] AS [a]
+WHERE [a].[IsSuperAdmin] = CAST(1 AS bit)" (0723d8ff)
+2024-04-25T23:41:45.5200447+01:00  [INF] User profile is available. Using '"C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2024-04-25T23:41:45.5568953+01:00  [ERR] Message => One or more errors occurred. (Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.)|Stacktrace =>    at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.InitializeSupperUser(IServiceScope scope) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 87|InnerException => System.InvalidOperationException: Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at ErrandPayApp.Data.Repositories.UserRepository.CreateDefaultUser() in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Data\Repositories\UserRepository.cs:line 307 (2a14ea4d)
+System.AggregateException: One or more errors occurred. (Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.)
+ ---> System.InvalidOperationException: Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at ErrandPayApp.Data.Repositories.UserRepository.CreateDefaultUser() in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Data\Repositories\UserRepository.cs:line 307
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.InitializeSupperUser(IServiceScope scope) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 87
+2024-04-25T23:41:45.8475388+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-04-25T23:41:45.8529346+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-04-25T23:41:45.8687160+01:00  [INF] Content root path: "C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.API" (b5d60022)
+2024-04-25T23:41:45.9419260+01:00 8000000a-0002-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T23:41:49.9624329+01:00 8000000a-0002-fa00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 4029.2390ms (791a596a)
+2024-04-25T23:42:54.0882519+01:00 80000087-0005-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/index.html - - (ca22a1cb)
+2024-04-25T23:42:54.6328727+01:00 80000087-0005-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/index.html - - - 200 - text/html;charset=utf-8 544.7096ms (791a596a)
+2024-04-25T23:42:54.8435683+01:00 80000014-0007-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger-ui.css - - (ca22a1cb)
+2024-04-25T23:42:54.8456832+01:00 80000015-0006-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger-ui-bundle.js - - (ca22a1cb)
+2024-04-25T23:42:54.8547955+01:00 8000005f-0006-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger-ui-standalone-preset.js - - (ca22a1cb)
+2024-04-25T23:42:54.8646328+01:00 80000002-0006-f900-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/_vs/browserLink - - (ca22a1cb)
+2024-04-25T23:42:54.8647770+01:00 8000000a-0006-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/_framework/aspnetcore-browser-refresh.js - - (ca22a1cb)
+2024-04-25T23:42:54.8812586+01:00 8000000a-0006-fa00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 16.2320ms (791a596a)
+2024-04-25T23:42:54.9211228+01:00 80000014-0007-ff00-b63f-84710c7967bb [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2024-04-25T23:42:54.9214789+01:00 8000005f-0006-fd00-b63f-84710c7967bb [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2024-04-25T23:42:54.9266607+01:00 80000014-0007-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger-ui.css - - - 200 142933 text/css 83.0888ms (791a596a)
+2024-04-25T23:42:54.9275261+01:00 80000015-0006-fb00-b63f-84710c7967bb [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2024-04-25T23:42:54.9341325+01:00 8000005f-0006-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 80.6719ms (791a596a)
+2024-04-25T23:42:54.9680588+01:00 80000015-0006-fb00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger-ui-bundle.js - - - 200 986342 application/javascript 122.3726ms (791a596a)
+2024-04-25T23:42:54.9984559+01:00 80000002-0006-f900-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 133.7955ms (791a596a)
+2024-04-25T23:42:55.1451174+01:00 80000004-0006-f900-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/favicon-32x32.png - - (ca22a1cb)
+2024-04-25T23:42:55.1466915+01:00 80000004-0006-f900-b63f-84710c7967bb [INF] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"' (27b0a520)
+2024-04-25T23:42:55.1473123+01:00 80000004-0006-f900-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/favicon-32x32.png - - - 200 628 image/png 2.1355ms (791a596a)
+2024-04-25T23:42:55.2150266+01:00 8000003b-0005-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - (ca22a1cb)
+2024-04-25T23:42:55.4167921+01:00 8000003b-0005-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 201.7515ms (791a596a)
+2024-04-25T23:45:04.6755726+01:00  [INF] Entity Framework Core "5.0.6" initialized '"APPContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MaxPoolSize=128 " (9958f5bb)
+2024-04-25T23:45:05.3598209+01:00  [INF] Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-04-25T23:45:05.4012050+01:00  [INF] Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-04-25T23:45:05.4066875+01:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2024-04-25T23:45:05.4078784+01:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2024-04-25T23:45:05.4529761+01:00  [INF] Executed DbCommand ("14"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2024-04-25T23:45:05.4884218+01:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2024-04-25T23:45:05.9492001+01:00  [INF] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PermissionName]
+FROM [Permissions] AS [p]" (0723d8ff)
+2024-04-25T23:45:06.1115503+01:00  [INF] Executed DbCommand ("49"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[City], [a].[ConfirmEmail], [a].[ConfirmPassword], [a].[Country], [a].[CreatedBy], [a].[CreatedDate], [a].[DateAccountLocked], [a].[Email], [a].[EmailConfirmationDate], [a].[FirstName], [a].[IsActive], [a].[IsDeleted], [a].[IsEmailConfirmed], [a].[IsLockedOut], [a].[IsSuperAdmin], [a].[LastLogin], [a].[LockoutCounter], [a].[ModifiedBy], [a].[ModifiedDate], [a].[MustChangePassword], [a].[No], [a].[Password], [a].[PhoneNumber], [a].[Road], [a].[State], [a].[SurName], [a].[Telephone], [a].[Title]
+FROM [AppUsers] AS [a]
+WHERE [a].[IsSuperAdmin] = CAST(1 AS bit)" (0723d8ff)
+2024-04-25T23:45:06.4003757+01:00  [INF] User profile is available. Using '"C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2024-04-25T23:45:06.4429110+01:00  [ERR] Message => One or more errors occurred. (Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.)|Stacktrace =>    at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.InitializeSupperUser(IServiceScope scope) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 87|InnerException => System.InvalidOperationException: Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at ErrandPayApp.Data.Repositories.UserRepository.CreateDefaultUser() in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Data\Repositories\UserRepository.cs:line 307 (2a14ea4d)
+System.AggregateException: One or more errors occurred. (Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.)
+ ---> System.InvalidOperationException: Unable to track an entity of type 'AppUser' because its primary key property 'Id' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at ErrandPayApp.Data.Repositories.UserRepository.CreateDefaultUser() in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Data\Repositories\UserRepository.cs:line 307
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at ErrandPayApp.Infrastructure.Configuration.DatabaseConfiguration.InitializeSupperUser(IServiceScope scope) in C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.Infrastructure\Configuration\DatabaseConfiguration.cs:line 87
+2024-04-25T23:45:06.7478938+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-04-25T23:45:06.7520702+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-04-25T23:45:06.7571955+01:00  [INF] Content root path: "C:\Users\HP\source\repos\ErrandPayApp.API\ErrandPayApp.API" (b5d60022)
+2024-04-25T23:45:06.8220752+01:00 80000004-0005-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - - (ca22a1cb)
+2024-04-25T23:45:16.5515151+01:00 80000004-0005-fc00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - - - 404 - - 9734.1229ms (791a596a)
+2024-04-25T23:46:51.0505204+01:00 8000000e-0002-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/index.html - - (ca22a1cb)
+2024-04-25T23:46:51.1711568+01:00 8000000e-0002-fa00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/index.html - - - 200 - text/html;charset=utf-8 120.6953ms (791a596a)
+2024-04-25T23:46:51.2361907+01:00 80000037-0005-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/_framework/aspnetcore-browser-refresh.js - - (ca22a1cb)
+2024-04-25T23:46:51.2460306+01:00 80000037-0005-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 9.4649ms (791a596a)
+2024-04-25T23:46:51.4650564+01:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/_vs/browserLink - - (ca22a1cb)
+2024-04-25T23:46:51.5534150+01:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 88.3302ms (791a596a)
+2024-04-25T23:46:51.7667652+01:00 80000064-0004-f900-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - (ca22a1cb)
+2024-04-25T23:46:51.9527285+01:00 80000064-0004-f900-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 185.8288ms (791a596a)
