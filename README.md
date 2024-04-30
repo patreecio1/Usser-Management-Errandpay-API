@@ -2,7 +2,7 @@
 
 Step 1: Clone the Repository
 If the existing application is hosted in a version control system like Git, clone the repository to your local machine.
-git clone  https://github.com/patreecio1/ErrandPayAPI/tree/dev >
+git clone https://github.com/patreecio1/Usser-Management-Errandpay-API.git
 
 Step 2: Open Solution in Visual Studio
 Open the solution file (.sln) of your existing ErrandPayAPI project in Visual Studio.
