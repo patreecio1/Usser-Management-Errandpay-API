@@ -24,7 +24,7 @@ namespace ErrandPayApp.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] LoginVm model)
         {
-            //validate my endpoint here
+            //validate my endpoint here yess
             model.Validate();
             LoginResponseModel result = await _accountManager.Login(model.Email, model.Password);
             return Ok(ResponseModel<LoginResponseModel>.IsSuccessful(result, "Successful"));
