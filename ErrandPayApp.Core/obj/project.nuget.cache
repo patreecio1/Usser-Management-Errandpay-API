@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9Y6TUvXWwbMUBaxvgT0Dga6fTKds/LwYgI6wgwAttkXU7LDyzn3HjgG3oqisWP2uJmMob5FGYBiHNZoGqV1cBw==",
+  "dgSpecHash": "SNYQuxtxoxk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\Desktop\\errandapi\\Usser-Management-Errandpay-API\\ErrandPayApp.Core\\ErrandPayApp.Core.csproj",
+  "projectFilePath": "C:\\Users\\HP\\source\\repos\\patreecio1\\Usser-Management-Errandpay-API\\ErrandPayApp.Core\\ErrandPayApp.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
@@ -129,10 +129,7 @@
     "C:\\Users\\HP\\.nuget\\packages\\system.threading.timer\\4.0.1\\system.threading.timer.4.0.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\system.xml.readerwriter\\4.0.11\\system.xml.readerwriter.4.0.11.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.16\\microsoft.windowsdesktop.app.ref.7.0.16.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.16\\microsoft.netcore.app.ref.7.0.16.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.16\\microsoft.aspnetcore.app.ref.7.0.16.nupkg.sha512"
+    "C:\\Users\\HP\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512"
   ],
   "logs": []
 }

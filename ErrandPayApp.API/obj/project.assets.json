@@ -9726,19 +9726,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\errandapi\\Usser-Management-Errandpay-API\\ErrandPayApp.API\\ErrandPayApp.API.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\source\\repos\\patreecio1\\Usser-Management-Errandpay-API\\ErrandPayApp.API\\ErrandPayApp.API.csproj",
       "projectName": "ErrandPayApp.API",
-      "projectPath": "C:\\Users\\HP\\Desktop\\errandapi\\Usser-Management-Errandpay-API\\ErrandPayApp.API\\ErrandPayApp.API.csproj",
+      "projectPath": "C:\\Users\\HP\\source\\repos\\patreecio1\\Usser-Management-Errandpay-API\\ErrandPayApp.API\\ErrandPayApp.API.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\errandapi\\Usser-Management-Errandpay-API\\ErrandPayApp.API\\obj\\",
+      "outputPath": "C:\\Users\\HP\\source\\repos\\patreecio1\\Usser-Management-Errandpay-API\\ErrandPayApp.API\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9752,14 +9757,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\HP\\Desktop\\errandapi\\Usser-Management-Errandpay-API\\ErrandPayApp.Core\\ErrandPayApp.Core.csproj": {
-              "projectPath": "C:\\Users\\HP\\Desktop\\errandapi\\Usser-Management-Errandpay-API\\ErrandPayApp.Core\\ErrandPayApp.Core.csproj"
+            "C:\\Users\\HP\\source\\repos\\patreecio1\\Usser-Management-Errandpay-API\\ErrandPayApp.Core\\ErrandPayApp.Core.csproj": {
+              "projectPath": "C:\\Users\\HP\\source\\repos\\patreecio1\\Usser-Management-Errandpay-API\\ErrandPayApp.Core\\ErrandPayApp.Core.csproj"
             },
-            "C:\\Users\\HP\\Desktop\\errandapi\\Usser-Management-Errandpay-API\\ErrandPayApp.Data\\ErrandPayApp.Data.csproj": {
-              "projectPath": "C:\\Users\\HP\\Desktop\\errandapi\\Usser-Management-Errandpay-API\\ErrandPayApp.Data\\ErrandPayApp.Data.csproj"
+            "C:\\Users\\HP\\source\\repos\\patreecio1\\Usser-Management-Errandpay-API\\ErrandPayApp.Data\\ErrandPayApp.Data.csproj": {
+              "projectPath": "C:\\Users\\HP\\source\\repos\\patreecio1\\Usser-Management-Errandpay-API\\ErrandPayApp.Data\\ErrandPayApp.Data.csproj"
             },
-            "C:\\Users\\HP\\Desktop\\errandapi\\Usser-Management-Errandpay-API\\ErrandPayApp.Infrastructure\\ErrandPayApp.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\HP\\Desktop\\errandapi\\Usser-Management-Errandpay-API\\ErrandPayApp.Infrastructure\\ErrandPayApp.Infrastructure.csproj"
+            "C:\\Users\\HP\\source\\repos\\patreecio1\\Usser-Management-Errandpay-API\\ErrandPayApp.Infrastructure\\ErrandPayApp.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\HP\\source\\repos\\patreecio1\\Usser-Management-Errandpay-API\\ErrandPayApp.Infrastructure\\ErrandPayApp.Infrastructure.csproj"
             }
           }
         }
@@ -9768,7 +9773,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net7.0": {
@@ -9808,24 +9819,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.16, 7.0.16]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[7.0.16, 7.0.16]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.16, 7.0.16]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.16, 7.0.16]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -9834,7 +9827,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
